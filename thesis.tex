@@ -1,0 +1,63 @@
+\documentclass[twoside,12pt]{mythesis} %this is the mythesis.cls file
+% twoside,openright,versioninfo
+
+% Consider:
+% \newcommand{\ie}{i.\,e.}
+% \newcommand{\Ie}{I.\,e.}
+% \newcommand{\eg}{e.\,g.}
+% \newcommand{\Eg}{E.\,g.}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+
+%You might need to load other packages here...
+
+%% Symbols
+% unresolved:
+\newcommand{\ud}{\mathrm{d}}
+\newcommand{\drel}{\ensuremath{r_{\mathrm{rel}}}}
+\newcommand{\nmax}{\ensuremath{n_\mathrm{max}}}
+
+%Information for the title page
+%Some of this is hard coded in mythesis.cls but you can over write if you need to
+\title{Convergence and disparity in the evolution of tenrecs (Afrosoricida, Tenrecidae)}
+
+%
+\author{Sive Finlay}
+%
+\month{\textsc{sometime}} \year{2014}
+\previousdegrees{B.A. (mod), Trinity College Dublin 2008}
+\degreetitle{Doctor of Philosophy}
+\institution{Trinity College Dublin}
+\school{School of Natural Sciences}
+\department{Zoology}
+
+%End of preamble.
+
+\begin{document}
+
+\maketitle %puts in your title
+
+%\input{abstract} %inputs abstract.tex
+%\input{preface} %inputs preface.tex
+\allcontents %tells it to make a table of contents with figure and table lists too
+%\input{acknowledgements} %inputs acknowledgements.tex
+\cleardoublepage
+\mainbody
+
+%\input{ch1-introduction} %This is a ch1-introduction.tex file with contents of intro chapter
+\input{chap_methods}	%This is a methods chapter
+%\input{ch3-velociraptor}	
+%\input{ch4-conclusion}	
+
+\formatbibliography %note there are only a few refs in this example in the appendix
+%************************************************
+%NB: I need to fix this refstyle for software and website references
+%*********************************************
+\bibliographystyle{refstyle} %you may want to make a new reference style. This is refstyle.bst
+\bibliography{refs_thesis} %you may also call you bibliography something different. This is refs-thesis.bib
+
+\formatappendices
+%\input{ch2-labstudy-appendix}
+
+\end{document}
