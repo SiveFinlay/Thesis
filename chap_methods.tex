@@ -25,27 +25,7 @@ As MSW does not include all known species, I used the International Union for th
 \begin{table}[h]
 \caption[Summary of species measured] %this appears in the table of contents
 {The number of species I measured in each family compared to the total number of species in that family according to two sources; \citep{Wilson2005} and \citep{IUCN2012}}
-\begin{tabular}{llccc}
-\hline
-\textbf{Order} & \textbf{Family} & \textbf{Species measured} & \textbf{Species in MSW} & \textbf{Species in IUCN} \\
-\hline
-%----------------------------------------------------
-Afrosoricida & Tenrecidae & X & 30 & 34\\
-%-------------------------------------------------
-Afrosoricida & Chrysochloridae & X & 21 & 21\\
-%----------------------------------------------------
-Erinaceomorpha & Erinaceidae & X & 24 & X\\
-%----------------------------------------------------
-Soricomorpha & Soricidae & X & 376 & X\\
-%----------------------------------------------------
-Soricomorpha & Solenodontidae & X & 4 & X\\
-%----------------------------------------------------
-Soricomorpha & Talpidae & X & 39 & X\\
-%----------------------------------------------------
-Notoryctemorphia & Notoryctidae & X & 2 & X\\
-%-----------------------------------------------
-\hline
-\end{tabular}
+\input{Methods/tables/species.measured}
 \label{tab:species.measured}
 \end{table}
 
@@ -82,15 +62,11 @@ Figures x-x depict the linear measurements of skulls and figures xx show the lim
 %I need to fill in these tables
 %******************************************
 % Skull and mandible measurements
+
 \begin{table}[h]
 \caption[Description of the skull and mandible measurements]
 		{Skull and mandible measurements}% add to this caption
-\begin{tabular}{lll}
-\hline
-\textbf{Abbreviation} & \textbf{Measurement} & \textbf{Description}\\
-\hline
-\hline
-\end{tabular}
+\input{Methods/tables/skulls.measurements}
 \label{tab:sk.measurements}
 \end{table}
 
@@ -99,13 +75,7 @@ Figures x-x depict the linear measurements of skulls and figures xx show the lim
 \begin{table}[h]
 \caption[Description of the limb measurements]
 		{Limb measurements} % add to this caption
-\begin{tabular}{lll}
-\hline
-\textbf{Abbreviation} & \textbf{Measurement} & \textbf{Description}\\
-\hline
-\hline
-
-\end{tabular}
+\input{Methods/tables/limbs.measurements}
 \label{tab:limb.measurements}
 \end{table}
 
@@ -177,35 +147,7 @@ Most of the landmarks in this view are concentrated around the dentition and pal
 \begin{table}[h]
 \caption[Skulls: ventral landmarks]
 		{Descriptions of the landmarks (points) and curves (semilandmarks) for the skulls in ventral view (see Figure X.} 
-\begin{tabular}[t]{l l}		
-\hline
-\textbf{Landmark} & \textbf{Description} \\
-\hline
-%--------------------------------------
-1 & Anterior point of the palate\\
-%--------------------------------------
-2 + 3 & Posterior, lateral extremity of the right (2) and left(3) incisor\\
-%--------------------------------------
-4 + 5 & Anterior, outer point of the first molar on the right (4) and left (5)\\
-%--------------------------------------
-6 + 7 & Posterior, outermost point of the molar surface on the right (6) and left (7) \\
-%--------------------------------------
-8 & Widest point of the curve of the palatine on the right side\\
-%--------------------------------------
-9 & Posterior point of the palatine in the midline\\
-%--------------------------------------
-10 & Widest point of the curve of the palatine on the left side\\
-%--------------------------------------
-11 & Anterior of the occipital foramen in the midline\\
-%--------------------------------------
-12 + 13 & Widest (extreme lateral) point of the braincase on the right (12) and left (13)\\
-%--------------------------------------
-Curve* & Outline of the back of the skull (between landmarks 12 and 13), 60 points \\
-%------------------------------------------------------------
-\hline
-&*NB: This curve doesn't necessarily trace homologous features because of the \\ 
-& variation in the position of the foramen magnum.
-\end{tabular}
+\input{Methods/tables/skvent.landmarks}
 \label{tab:skvent}
 \end{table}
 %==================================================================
@@ -217,38 +159,7 @@ I originally tried to include more landmarks around the infraorbital foramina (I
 \begin{table}[h]
 \caption[Skulls: lateral landmarks]
 		{Descriptions of the landmarks (points) and curves (semilandmarks) for the skulls in lateral view (see Figure X.} 
-\begin{tabular}[t]{l l}		
-\hline
-\textbf{Landmark} & \textbf{Description} \\
-\hline
-%--------------------------------------
-1 & Anterior, upper tip of the nasal bone\\
-%--------------------------------------
-2 & Anterior of the alveolus of the first incisor\\
-%--------------------------------------
-3 & Lowest point of the first incisor\\
-%--------------------------------------
-4& Posterior of the alveolus of the last incisor \\
-%--------------------------------------
-5 & Anterior tip of the alveolus of the first molar\\
-%--------------------------------------
-6 & Posterior tip of the alveolus of the last molar\\
-%--------------------------------------
-7 & Lowest point of the basi-occipital (base of the back of the skull)\\
-%--------------------------------------
-8 & Highest point of the braincase\\
-%--------------------------------------
-9 & Highest point of the infraorbital foramen\\
-%--------------------------------------
-\hline
-\textbf{Curve A} & Between points 7 and 8  \\
-(20 points)& Back of the skull from the lowest to highest points\\
-%------------------------------------------------------------
-\textbf{Curve B} & Between points 8 and 1  \\
-(15 points)&From the highest point of the braincase to the front of the nasal \\
-%------------------------------------------------------------
-\hline
-\end{tabular}
+\input{Methods/tables/sklat.landmarks}
 \label{tab:sklat}
 \end{table}
 %=================================================
@@ -260,41 +171,7 @@ There were even fewer identifiable landmarks in this view because none of the de
 \begin{table}[h]
 \caption[Skulls: dorsal landmarks]
 		{Descriptions of the landmarks (points) and curves (semilandmarks) for the skulls in dorsal view (see Figure X.} 
-\begin{tabular}[t]{l l}		
-\hline
-\textbf{Landmark} & \textbf{Description} \\
-\hline
-%------------------------------------------------------------
-1 + 2 & Left (1) and right (2) anterior points of the premaxilla \\
-%------------------------------------------------------------
-3 & Anterior of the nasal bones in the midline \\
-%------------------------------------------------------------
-4 + 5 &	Maximum width of the palate (maxillary) on the left (4) and right (5)\\
-%------------------------------------------------------------
-6 & Midline intersection between nasal and frontal bones \\
-%------------------------------------------------------------
-7 + 8 & Widest point of the skull on the left (7) and right (8) \\
-%------------------------------------------------------------
-9 &	Posterior of the skull in the midline \\
-	%Panchetti 2008 and Macholan2008 have different definitions for this one so I need to choose one
-%------------------------------------------------------------
-10 & Posterior intersection between saggital and parietal sutures \\
-%--------------------------------------
-\hline
-\textbf{Curve A} & Outline of the braincase on the left side, between landmarks 9 and 7\\ 
-(12 points) & (does not include visible features from the lower (ventral) side of the skull) \\
-
-\textbf{Curve B} & Outline of the palate on the left side, between landamarks 4 and 1 \\
-(10 points) & (outline of the rostrum only, not the shape of the teeth)\\
-
-\textbf{Curve C} &	Outline of the braincase on the right side, between landmarks 9 and 8 \\
-(12 points) & (does not include visible features from the lower (ventral) side of the skull) \\
-
-\textbf{Curve D} & Outline of the palate on the right side, between landamarks 5 and 2 \\
-(10 points) & (outline of the rostrum only, not the shape of the teeth)\\
-%------------------------------------------------------------
-\hline
-\end{tabular}
+\input{Methods/tables/skdors.landmarks}
 \label{tab:skdors}
 \end{table}
 %=======================================================================
@@ -312,31 +189,12 @@ I placed seven landmarks and drew four curves on each mandible picture (again, r
 \centering
 \caption[Mandibles' landmarks]
 	{Descriptions of the landmarks (points) and curves (semilandmarks) for the mandibles in lateral (buccal) view (see figure X}
-\begin{tabular}[t]{l l}		
-\hline
-\textbf{Landmark} & \textbf{Description} \\
-\hline
-1 & Anterior of the alveolus of the first incisor \\
-2 & Posterior of the alveolus of the first incisor \\
-3 &	Anterior of the alveolus of the first molar \\
-4 & Posterior of the alveolus of the last molar \\
-5 & Maximum curvature between the coronoid and condylar processes\\
-6 & Maximum curvature between the condylar and angular processes  \\
-7 &	Maximum curvature between the angular process and the horizontal ramus \\
-%---------------------------------------------------
-\hline
-Curve A & Condyloid process (between landmarks 4 and 5, 15 points)\\
-Curve B & Condylar process (between landmarks 5 and 6, 15 points) \\
-Curve C & Angular process (between landmarks 6 and 7, 15 points)  \\
-Curve D & Base of the jaw (between landmarks 7 and 1, 12 points)  \\
-%---------------------------------------------------
-\hline
-\end{tabular}
+\input{Methods/tables/mands.landmarks}
 \label{mandslanddesc} %give it a label so I can refer to it in the text
 \end{table}
 %===================================================
 
-\subsubsection{\normalfont{Skins}}
+\subsection{\normalfont{Skins}}
 % Outline analysis of skins for overall body shape?
 
 %####################################################
@@ -401,8 +259,9 @@ to estimate the overall specimen orientation error in my photographic dataset. T
 
 \subsection{\normalfont{Landmark placement}}
 
-I placed the landmarks on each set of pictures so inter-observer variation is not an issue for my study.  However, repeatability and reliability of my choice of landmarks could affect the final results of my analyses \citep{Arnqvist}.
+I placed the landmarks on each set of pictures so inter-observer variation is not an issue for my study.  However, repeatability and reliability of my choice of landmarks could affect the final results of my analyses \citep{Arnqvist1998}.
 I used a combined, nested approach to test for both orientation and landmark placement error \citep{Arnqvist1998, Barrow2008}. For each of the 89 specimens in my random subset of species, I photographed their skulls (dorsal, ventral and lateral views) and mandibles three times. I then copied these images and placed landmarks on 3 copies of each image. I used a nested mixed mode ANOVA to assess the measurement error of the Procrustes-superimposed coordinates. There were three factors in my ANOVA; specimen, photo (3 pictures of each specimen) and landmark trial (placed landmarks on 3 copies of each of my photos).
+
 
 %Effect size for the variance explained by each factor, based on inter landmark linear distances……..
 %(I could also use PC scores or a Mahalanobis distance matrix…)
