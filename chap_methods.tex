@@ -1,3 +1,8 @@
+
+%NB: I need to fix some of the formatting
+% at the moment it only seems to allow one figure or table per page and puts various text blocks in between
+% Probably something in the mythesis style template
+
 \chapter{Data collection}
 \label{chap:methods}
 
@@ -141,21 +146,39 @@ Here I summarise the landmarks and curves which I used on each of my different s
 %**************************************************************
 \subsection{\normalfont{Skulls: ventral view}}
 
-Most of the landmarks in this view are concentrated around the dentition and palate of the animals. I placed 13 landmarks and drew one outline curve (resampled to 60 semilandmark points) around the back of the skull between landmarks 12 and 13 (figure X). The high variability of my species’ basi-cranial region and difficulties associated with identifying developmentally or functionally homologous points precluded designation of additional landmarks towards the back of the skulls. Table \ref{tab:skvent} outlines the descriptions of the landmarks I placed in the ventral pictures.
+Most of the landmarks in this view are concentrated around the dentition and palate of the animals. I placed 13 landmarks and drew one outline curve (resampled to 60 semilandmark points) around the back of the skull between landmarks 12 and 13 (figure X). The high variability of my species’ basi-cranial region and difficulties associated with identifying developmentally or functionally homologous points precluded designation of additional landmarks towards the back of the skulls. Table \ref{tab:skvent} outlines the descriptions of the landmarks I placed on the ventral pictures.
 
 % Skulls ventral landmarks
+
+\begin{figure}[h] 
+  \centering
+  \includegraphics[width=12cm, height=12cm, keepaspectratio=true]{Methods/figures/skvent_landmarks_pot_vel.jpg}
+    \caption[Skulls: ventral landmarks]%this is what appears in table of contents
+    {Landmarks (red) and curve (blue) for the ventral skull pictures, further descriptions in table \ref{tab:skvent}. The specimen is a giant otter shrew tenrec, \textit{Potamogale velox}, NHML 1934.6.16.2}
+  \label{fig:skvent_landmarks}
+  \end{figure}
+
 \begin{table}[h]
 \caption[Skulls: ventral landmarks]
-		{Descriptions of the landmarks (points) and curves (semilandmarks) for the skulls in ventral view (see Figure X.} 
+		{Descriptions of the landmarks (points) and curves (semilandmarks) for the skulls in ventral view (figure \ref{fig:skvent_landmarks})} 
 \input{Methods/tables/skvent.landmarks}
 \label{tab:skvent}
 \end{table}
 %==================================================================
 \subsection{\normalfont{Skulls: lateral view}}
-I reflected photographs of the left lateral side of the skull so that all pictures would be in the same orientation. I placed nine landmarks on the lateral pictures (see figure X below) and also drew two semilandmark curves between landmarks 7 and 8 to represent the shape of the back of the skull (resampled to 20 semilandmark points) and landmarks 8 and 1 (resampled to 15 semilandmark points) down the midline of the nose to represent the shape of the top of the skull. Table \ref{tab:sklat} describes my definitions for each of the landmark points.
+I placed nine landmarks on the lateral pictures (see figure \ref{fig:sklat_landmarks} below) and also drew two semilandmark curves between landmarks 7 and 8 to represent the shape of the back of the skull (resampled to 20 semilandmark points) and landmarks 8 and 1 (resampled to 15 semilandmark points) down the midline of the nose to represent the shape of the top of the skull. Table \ref{tab:sklat} describes my definitions for each of the landmark points.
+For specimens that were damaged on their right side we reflected photographs of the left lateral side of the skull so that all pictures would be in the same orientation.
 I originally tried to include more landmarks around the infraorbital foramina (IF) as a crude measure of facial sensitivity and because the IF area is correlated with ecotypes \citep{Crumpton2012}. However, it proved impossible to see the boundaries of the IF in many species and single landmark points could not represent the shape of the full foramina. 
 
-% Skulls lateral landmarks
+%Sklat diagram and landmarks description
+\begin{figure}[h] 
+  \centering
+  \includegraphics[width=12cm, height=12cm, keepaspectratio=true]
+  {Methods/figures/sklat_landmarks_pot_vel.png}
+    \caption[Skulls: lateral landmarks] {Landmarks (red) and curve (blue) for the lateral skull pictures, further descriptions in table \ref{tab:sklat}. The specimen is a giant otter shrew tenrec, \textit{Potamogale velox}, NHML 1934.6.16.2}
+  \label{fig:sklat_landmarks}
+  \end{figure}
+
 \begin{table}[h]
 \caption[Skulls: lateral landmarks]
 		{Descriptions of the landmarks (points) and curves (semilandmarks) for the skulls in lateral view (see Figure X.} 
@@ -165,12 +188,22 @@ I originally tried to include more landmarks around the infraorbital foramina (I
 %=================================================
 
 \subsection{\normalfont{Skulls: dorsal view}}
-There were even fewer identifiable landmarks in this view because none of the dental characteristics are visible. Therefore, most of my landmarks are relative (type 3) points which represent overall morphological shape but not necessarily homologous biological features \citep{Zelditch2012}. I placed ten landmarks and drew four semilandmark curves to represent the shape of both the braincase (posterior) and nasal (anterior) area of the skulls. Table \ref{tab:skdors} describes how I placed the landmarks and drew the outline curves for my dorsal skull pictures 
+There were even fewer identifiable landmarks in this view because none of the dental characteristics are visible. Therefore, most of my landmarks are relative (type 3) points which represent overall morphological shape but not necessarily homologous biological features \citep{Zelditch2012}. I placed ten landmarks and drew four semilandmark curves to represent the shape of both the braincase (posterior) and nasal (anterior) area of the skulls (figure \ref{fig:skdors_landmarks}). Table \ref{tab:skdors} describes how I placed the landmarks and drew the outline curves for my dorsal skull pictures 
 
-% Skulls dors landmarks
+% Skulls dorsal landmarks
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\linewidth]{Methods/figures/AMNH_51327_dorsallandmarksdiagram.png}
+\caption[Skulls: dorsal landmarks]
+{Landmarks (red) and curves (blue) for the skulls in dorsal view. Curves were re-sampled to the same number of evenly-spaced points. See table \ref{tab:skdors} for description of curves and landmarks.\textit{Potamogale velox} (Tenrecidae) skull, museum accession number: AMNH\_51327}
+\label{fig:skdors_landmarks}
+\end{figure}
+
+
 \begin{table}[h]
 \caption[Skulls: dorsal landmarks]
-		{Descriptions of the landmarks (points) and curves (semilandmarks) for the skulls in dorsal view (see Figure X.} 
+		{Descriptions of the landmarks (points) and curves (semilandmarks) for the skulls in dorsal view (figure \ref{fig:skdors_landmarks})} 
 \input{Methods/tables/skdors.landmarks}
 \label{tab:skdors}
 \end{table}
@@ -184,13 +217,21 @@ I placed seven landmarks and drew four curves on each mandible picture (again, r
 %********
 
 %Mandibles' landmarks
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{Methods/figures/AMNH_51327_landmarksdiagram.png}
+
+\caption[Mandibles' landmarks]
+{Landmarks (red) and curves (blue) used for the mandibles. Curves were re-sampled to the same number of evenly-spaced points. See table \ref{tab:mands} for description of curves and landmarks.\textit{Potamogale velox} (Tenrecidae) mandible, accession number: AMNH\_51327}
+\label{fig:mands_landmarks}
+\end{figure}
 
 \begin{table}[h]			
 \centering
 \caption[Mandibles' landmarks]
-	{Descriptions of the landmarks (points) and curves (semilandmarks) for the mandibles in lateral (buccal) view (see figure X}
-\input{Methods/tables/mands.landmarks}
-\label{mandslanddesc} %give it a label so I can refer to it in the text
+	{Descriptions of the landmarks (points) and curves (semilandmarks) for the mandibles in lateral (buccal) view (figure \ref{fig:mands_landmarks}}
+\input{Methods/tables/mandibles.landmarks}
+\label{tab:mands} %give it a label so I can refer to it in the text
 \end{table}
 %===================================================
 
