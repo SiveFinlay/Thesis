@@ -9,12 +9,18 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{booktabs}
+\usepackage{capt-of}
+\usepackage{enumerate}
+
+
 
 %You might need to load other packages here...
-
-\setcounter{secnumdepth}{3} %number of subsections that are allowed
-\setcounter{tocdepth}{3} 
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4} %number of subsections that are allowed
+ 
 	%I added these to try and get subsubsections to work but I could only get the numbering into the table of contents and not in the text
+	
+	
 
 %% Symbols
 % unresolved:
@@ -24,37 +30,36 @@
 
 %Information for the title page
 %Some of this is hard coded in mythesis.cls but you can over write if you need to
-\title{Convergence and disparity in the evolution of tenrecs (Afrosoricida, Tenrecidae)}
+\title{Morphological convergence and disparity in the evolution of tenrecs (Afrosoricida, Tenrecidae)}
 
 %
 \author{Sive Finlay}
 %
-\month{\textsc{sometime}} \year{2014}
+\month{\textsc{January}} \year{2015}
 \previousdegrees{B.A. (mod), Trinity College Dublin 2008}
-\degreetitle{Doctor of Philosophy}
+\degreetitle{Masters by Research}
 \institution{Trinity College Dublin}
 \school{School of Natural Sciences}
 \department{Zoology}
 
 %End of preamble.
-
+%--------------------------------------
 \begin{document}
 
 \maketitle %puts in your title
 
-%\input{abstract} %inputs abstract.tex
-%\input{preface} %inputs preface.tex
+\input{abstract} %inputs abstract.tex
 \allcontents %tells it to make a table of contents with figure and table lists too
-%\input{acknowledgements} %inputs acknowledgements.tex
+\input{acknowledgements} %inputs acknowledgements.tex
 \cleardoublepage
 \mainbody
 
-%\input{ch1-introduction} %This is a ch1-introduction.tex file with contents of intro chapter
-\input{chap_methods}	%This is a methods chapter
-%\input{ch3-velociraptor}	
-%\input{ch4-conclusion}	
+\input{chap_introduction} 
+\input{chap_methods}	
+\input{chap_results}
+\input{chap_discussion}
 
-\formatbibliography %note there are only a few refs in this example in the appendix
+\formatbibliography 
 %************************************************
 %NB: I need to fix this refstyle for software and website references
 %*********************************************
