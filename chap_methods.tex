@@ -161,9 +161,6 @@
 	
 	Here I summarise the landmarks and curves which I used on each of my different sets of pictures. For landmarks which are defined by dental structures, I used published dental formulae \citep{Nowak1983, MacPhee1987, KnoxJones1992, Marshall1996, Nagorsen2002, Goodman2006, Asher2008, ADW2013} where available to identify the number and type of teeth in each species.
 	
-	
-	After creating my files with the landmarks and semilandmarks placed on each picture, I built sliders files \citep{Zelditch2012} to specify which points should be treated as semilandmarks in further analyses. After landmarking and building sliders files, I used R v3.02 \citep[R Development Core][]{Team2013} for all subsequent statistical analyses.
-	
 %------------------------------------------------------------------
 \subsection{\normalfont{Skulls: dorsal view}}
 	Most of my landmarks in this view are relative (type 3) points which represent overall morphological shape but not necessarily homologous biological features \citep{Zelditch2012}. I placed ten landmarks and drew four semilandmark curves to represent the shape of both the braincase (posterior) and nasal (anterior) area of the skulls (figure \ref{fig:skdors_landmarks}). Table \ref{tab:skdors} describes how I placed the landmarks and drew the outline curves for my dorsal skull pictures 
@@ -260,6 +257,16 @@
 	\input{Methods/tables/mandibles.landmarks}
 	\label{tab:mands} 
 \end{table}
+%-----------------------------------------------
+
+\section{Procrustes superimposition}
+\label{sect:procrustes}
+
+	After creating my files with the landmarks and semilandmarks placed on each picture, I used TPSUtil \citep{Rohlf2012} to create sliders files \citep{Zelditch2012} to define which points were semilandmarks. I conducted all further morphometric analyses in R version 3.1.1 \citep{Team2014} within the geomorph package \citep{Adams2013}.
+	For each of the separate data sets, we used the gpagen function to run a general Procrustes alignment \citep{Rohlf1993} of the landmark coordinates while sliding the semilandmarks by minimising procrustes distance \citep{Bookstein1997}.
+	We used these Procrustes-aligned coordinates of all specimens to calculate average shape values for each species which we then used for a principal components (PC) analysis with the plotTangentSpace function \citep{Adams2013}. 
+
+
 %####################################################
 
 %I'm not sure whether this is the most appropriate way to deal with errors: I could split up the sections and put them at the end of each of the previous sections rather than breaking up the story here but that might be more fragmented overall
@@ -333,9 +340,31 @@
 \section{Data Analysis}
 \label{sect:data_analysis}
 
+Introduction to the data analyses
+
 \subsection{\normalfont{Comparing tenrecs' diversity to their closest relatives}}
+%I copied most of this section from the methods part of my disparity paper
+
+	For each of the morphometric data sets (dorsal, ventral, lateral skulls and mandibles), I ran a general Procrustes alignment (section \ref{sect:procrustes}) of just my tenrec and golden mole specimens to compare morphological diversity in the two families. I used the principal components axes which accounted for 95 \% of the cumulative variation to calculate four disparity metrics; the sum and product of the range and variance of morphospace occupied by each family \citep{Brusatte2008, Foth2012, Ruta2013}. We also calculated morphological disparity directly from the Procrustes-superimposed shape data based on the sum of the squared inter-landmark distances among species pairs \citep[SSqDist,][]{Zelditch2012}.
+	
+	I used two approaches to test whether tenrecs have significantly different morphologies compared to golden moles. The first was a comparison of morphospace occupation between the two groups with non parametric MANOVAs \citep{Anderson2001} to test whether tenrecs and golden moles occupy significantly different areas of morphospace \citep[e.g][]{Serb2011, Ruta2013}. 
+	
+	Secondly, I used pairwise permutation tests to test the null hypothesis that tenrecs and golden moles have equal disparity. If this hypothesis were true then the designation of each species as belonging to either tenrecs or golden moles should be arbitrary because each group would have the same disparity. Therefore I permutated the data by assigning family identities at random to each specimen and calculated the differences in disparity for each of the new family groupings. I repeated these permutations 1000 times to generate a null distribution of the expected differences in family disparity. I compared the observed (true) measures of the differences in disparity between tenrecs and golden moles to these permutated distributions to test whether the families had significantly different levels of disparity.
+
+	The majority of tenrec species (19 out of 31 in my data) are members of the \textit{Microgale} (shrew-like) genus which is notable for its relatively low phenotypic diversity \citep{ Soarimalala2011, Jenkins2003}. The strong similarities among these species may mask signals of higher disparity among other tenrecs. Therefore I repeated my family-level comparisons of disparity with a reduced data set that excluded the \textit{Microgale} so that I could compare disparity within the remaining 12 tenrec species to disparity within the 12 species of golden moles.
+
+
 
 \subsection{\normalfont{Quantifying convergence among tenrecs and other small mammals}}
+
+
+%Phylogeny section from the original disparity paper; probably relevant when I go back to the convergence analyses
+
+\subsubsection{Phylogeny} % I still have the problem of subsubsections not getting numbered in the main text
+	Instead of basing my analyses on individual trees and assuming that their topologies are known without error \citep[e.g.][]{Ruta2013, Foth2012, Brusatte2008, Harmon2003} I used a distribution of 101 pruned phylogenies derived from the randomly resolved mammalian supertrees in \citep{Kuhn2011}. 
+		% I used 101 because that was the number in the smaller Fritz file - I could change it to 100 instead if 101 sounds odd?
+
+	Eight species (six \textit{Microgale} tenrecs and two golden moles) in my morphological data sets were not in the phylogenies. Phylogenetic relationships among the \textit{Microgale} have not been resolved more recently than the \citep{Kuhn2011} analysis, therefore I added the additional \textit{Microgale} species at random to the \textit{Microgale} genus within each phylogeny \citep{Revell2012}. I could not use the same approach to add the two missing golden mole species because they were the only representatives of their respective genera within my data. Therefore I randomly added these species to the common ancestral node (using the findMRCA function in phytools \citep{Revell2012}) of all golden moles within each phylogeny. Adding these extra species to the phylogenies created polytomies which I resolved arbitrarily using zero-length branches \citep{Paradis2004}. I calculated pairwise phylogenetic distances among species using the cophenetic function \citep{Team2014}. 
 
 
 

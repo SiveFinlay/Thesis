@@ -6,10 +6,77 @@
 \noindent
 Overall results summary
 
-\section{Disparity}
+\section{Disparity} %Copied this in from the disparity paper
+
+	When we compared tenrecs’ cranial morphologies to their closest relatives we found a trend towards higher disparity in tenrecs than
+	in golden moles. However, these apparent differences were only
+	significant for some disparity metrics. In contrast, golden moles have more diverse mandible shapes than tenrecs which appears to be due to greater morphological variety in the posterior mandible strucutres of golden moles (section \ref{sect:nonmic_gmoles}).
+
+\subsection{\normalfont{Morphological disparity in tenrecs and golden moles}}
+	Figures  \ref{fig:fourPCA} depict the morphospace plots derived from our principal components analyses of average Procrustes-superimposed shape coordinates for each species in our skull and mandible data respectively. We used the principal components axes which accounted for 95\% of the cumulative variation (n = 7, 8, 8 axes for the dorsal, ventral and lateral skull analyses respectively and n = 12 axes for the mandibles) to calculate the disparity of each family. 
+
+%-----------------------------------------------------
+%PCA figures: same one that's in the disparity paper
+	%Source of this figure in my shape_data/output within the disparity folder 
+	\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{Disparity/writing/figures/FourPlotPCA.png}
+	\caption[Principal components plots of the morphospaces occupied by tenrecs and golden moles]
+		{Principal components plots of the morphospaces occupied by tenrecs (red, n=31 species) and golden moles (black, n=12) for the skulls: dorsal (A), ventral (B), lateral (C) and mandibles (D) analyses. Axes are PC1 and PC2 of the average scores from a PCA analysis of mean Procrustes shape coordinates for each species. }
+	\label{fig:fourPCA}
+	\end{figure}
+%--------------------------------------------------------
+
+	Tenrecs and golden moles clearly have very different cranial and mandible morphologies: in each analysis, the families occupy significantly different areas of morphospace (npMANOVA, table \ref{tab:npmanova.summary}). 
+
+%------------------------------------------------
+%Summary table of the npMANOVA morphospace occupation comparisons	
+	\begin{table}[!htb]	%!htb keeps the table within this section		
+
+	\caption[Summary of npMANOVA comparisons of morphospace occupation for tenrecs and golden moles]
+		{Summary of the npMANOVA comparisons of morphospace occupation for tenrecs and golden moles in each of the four analyses (three views of skulls and mandibles). In each case the two families occupy significantly different areas of morphospace.}
+	\centering
+	\input{Disparity/writing/tables/npmanova.summary} 
+	\label{tab:npmanova.summary}  
+	\end{table}
+%---------------------------------------
+	Our comparisons of disparity levels within each family yielded different trends for the skulls compared to the mandible analyses.	
+	In our analyses of the three different views of the skulls, when disparity is calculated from principal component - based metrics there is there is an overall trend for tenrecs to have higher disparity than golden moles. However, none of these differences are statistically significant (table \ref{tab:disp.summary}). In contrast, when we calculated disparity based on the sum of squared interlandmark differences between species pairs \citep{Zelditch2012} then golden moles had significantly higher levels of disparity than tenrecs (table \ref{tab:disp.summary}).
+
+\bigskip
+%------------------------------------------
+%Summary table of the family comparisons for all tenrecs vs. golden moles
+	\begin{table}[!htb]			
+	\caption[Summary of disparity comparisons between tenrecs and golden moles]
+		{Summary of disparity comparisons between tenrecs (T) and golden moles (G) for each of the data sets(rows) and five disparity metrics (columns). "Mandibles:one curve" refers to my shape analysis of mandibles excluding the three curves around the posterior structures of jaw (figure \ref{fig:sklat_landmarks}). Significant differences are highlighted in bold with the corresponding p value in brackets. Disparity metrics are; sum of variance, product of variance, sum of ranges, product of ranges and sum of squared distances among species. }
+	\centering
+	\input{Disparity/writing/tables/disp.trc.gmole.results} 
+	\label{tab:disp.summary}  
+	\end{table}
+%------------------------------------------
+\bigskip
+	There is a less clear pattern from our analysis of disparity in the mandibles. Three of our five metrics indicate that golden moles have significantly higher disparity in the shape of their mandibles than tenrecs (table \ref{tab:disp.summary}) although one metric (sum of ranges) indicated the opposite result. 
+	
+	The three curves that we placed at the back of the mandibles (figure \ref{fig:mands_landmarks}) place a particular emphasis on shape variation in the posterior of the bone; the ramus, coronoid, condylar and angular processes. Therefore, higher disparity in golden mole mandibles compared to tenrecs could be driven by greater morphological variation in these structures. To test this idea, we repeated our morphometric analyses of the mandibles with a reduced data set of points; just the seven landmark points and one single curve at the base of the jaw between landmarks 1 and 7 (figure \ref{fig:mands_landmarks}). When we compared familial disparity levels with this reduced data set we found that golden moles no longer had significantly higher disparity than tenrecs but rather there were some indications that the opposite was true (table \ref{tab:disp.summary}).
+	
+\subsection{\normalfont{Morphological disparity in non-\textit{Microgale} tenrecs and golden moles}}
+\label{sect:nonmic_gmoles} 	   
+	
+	We repeated our disparity comparisons with a subset of the tenrec specimens to remove the large and phenotypically similar \textit{Microgale} tenrec genus. In this case we found that tenrecs have significantly higher disparity than golden moles when the skulls are analysed in lateral view (table \ref{tab:disp.nonmic.summary}). However, none of the other comparisons in any of the analyses were significant. Similarly, the trend in the main analysis for golden moles to have significantly higher disparity measured as the sum of squared inter-landmark distances (table \ref{tab:disp.summary}) was not repeated in this comparison of disparity in non-\textit{Microgale} tenrecs and golden moles (table \ref{tab:disp.nonmic.summary}).
+\bigskip
+%-------------------------------------------------------
+%Summary of the family comparisons for non-Microgale tenrecs vs. golden moles
+	\begin{table}[!htb]			
+	\caption[Summary of disparity comparisons between non-\textit{Microgale} tenrecs and golden moles]
+		{Summary of disparity comparisons between non-\textit{Microgale} tenrecs (T) and golden moles (G) for each of the data sets(rows) and five disparity metrics (columns). Significant differences are highlighted in bold with the corresponding p value in brackets. Disparity metrics are; sum of variance, product of variance, sum of ranges, product of ranges and sum of squared distances among species. }
+	\centering
+	\input{Disparity/writing/tables/disp.nonmictrc.gmole.results} 
+	\label{tab:disp.nonmic.summary}  
+	\end{table}
+%------------------------------------	
 
 
-
+%**********************************************
 
 \section{Convergence}
 
