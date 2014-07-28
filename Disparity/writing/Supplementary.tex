@@ -1,0 +1,212 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{enumerate} 	% put in numbers or bullet points
+\usepackage{setspace}	% line spacing					
+\usepackage{authblk}	% For author affiliations
+\usepackage{graphicx} 	% For adding pictures
+\usepackage{pdflscape}	% for landscape pages
+\usepackage{mathtools}	% For equations etc.
+\usepackage[osf]{mathpazo} 
+\usepackage{float}		
+\floatstyle{plaintop} 	% Force table captions to go above the table
+\usepackage{longtable}
+\usepackage[margin ={2cm, 2cm, 2cm, 2cm}]{geometry}
+\usepackage[round]{natbib}
+%\setcounter{secnumdepth}{0} % removes numbers from section headings
+\raggedright 			% justify the text on the left only
+\pagenumbering{arabic}
+\linespread{1.6}
+	
+
+\begin{document}
+
+\title{
+       Quantifying cranial morphological disparity in tenrecs (Afrosoricida, Tenrecidae) with implications for their designation as an adaptive radiation\\
+       \bigskip
+       Supplementary Material }
+\author{Sive Finlay and Natalie Cooper}
+\date{}
+\maketitle
+
+
+
+
+%----------------------------------------------------
+%Camera protocol
+%---------------------------------------------------
+
+\section{Photographing specimens}
+One of us (SF) photographed the specimens with a Canon EOS 650D camera fitted with an EF 100mm f/2.8 Macro USM lens.We used a remote control (h\"ahnel Combi TF) to take the photos to avoid shaking the camera and distorting the images
+
+We used photographic copy stands consisting of a camera attachment with an adjustable height bar, a flat stage on which to place the specimen and an adjustable light source to either side of the stage. We used the copy stands that were available at each museum which differed in how the camera height was adjusted and in the light sources available.
+To take the light variability into account, on each day we took a picture of a white sheet of paper and used the custom white balance function on the camera to set the image as the baseline “white” measurement for those particular light conditions.
+
+We photographed the specimens on a black material background with the light source in the top left-hand corner of the picture. We positioned a piece of white card on the bottom right side of the specimen to reflect the light back onto the specimen and therefore minimise any shadows (figure \ref{fig:camera} below).
+We made small bean bags (12 x 5cm) from the same black material as the background and filled them with plastic beads. We used these bags as necessary to hold the specimens in position while being photographed. For example, when taking pictures of the lateral view of skulls, we placed one bean bag under the nose of the skull and another bag lying along the top (cranial) side of the skull to ensure that the side being photographed lay in a flat plane relative to the camera and did not tilt in any direction. 
+We used the grid-line function on the live-view display screen of the camera to position the specimens in the centre of each image. 
+
+
+
+%Camera picture
+	\begin{figure}[H] 
+  	\centering
+  	\includegraphics[width=12cm, height=12cm, keepaspectratio=true]{figures/camera.jpg}
+    \caption[Photographic set up]%this is what appears in table of contents
+    {Photographic set up for taking pictures of skulls. The camera (above centre) is fitted to a copy stand, the light source is directed from the top-left corner of the image and the white card reflects the light back onto the skull. }%this is under the figure
+  	\label{fig:camera}
+  	\end{figure}
+
+Photographs were captured and saved in a raw file format. Before using the pictures for morphometric analyses, we converted the raw files to binary (grey scale) images and re-saved them as TIFF files. The black and white pictures were more useful for later analyses since we were not interested in including any colour comparisons and it is easier to see some biological features in binary images. TIFF files were the most appropriate to use for my morphometric analyses as they are uncompressed (in comparison to JPEG) images and therefore there is less chance of any picture distortions which may affect later analyses \citep{HERC2013}.
+%----------------------------------------------
+%Resampling for minimum number of points
+%-----------------------------------------
+\section{Determining the number of semilandmarks to use for curves}
+	When combining landmark and semi-landmark approaches, there is a potential problem of over-sampling the curves (REFS). To determine the number of semilandmark points required to adequately summarise the curves in our data sets,  we followed the method outlined by MacLeod \citeyearpar{MacLeod2012}. 
+	For each data set we chose a random selection of pictures of specimens which represented the breadth of the morphological data (i.e. specimens from each sub-group of species).  We drew the appropriate curves on the each specimen and over-sampled the number of points on the curves (i.e. resampled the curves so that points were very close together). 
+	We measured the length of the line and regarded that as the 100\%, true length of that outline. We then re-sampled the curves with decreasing numbers of points and measured the length of the outlines. We calculated the length of the curves resampled with fewere points as a percentage of the total length of the curve. We repeated these calculations for each specimen and then found the average percentage length for each resampled curve across all of the specimens in the test file. We continued this process until we found the minimum number of points that, on average, gave a curve length which was at least a 96\% accurate representatio of the true (over-sampled) curve length.  
+	We repeated these curve-sampling tests for each analysis (skulls in dorsal/ventral/lateral views and mandibles in lateral view) to determine the minimum number of semilandmark points which would give accurate representations of morphological shape.
+
+%---------------------------------------------------------
+%Landmarks and results for ventral and lateral skull views
+%---------------------------------------------------------
+\section{Additional information for the morphometric analyses}
+
+%--------------------------------------
+\subsection{Landmark placement}
+
+\subsubsection{Skulls: dorsal view}
+%Add a description of the dorsal skull landmarks
+
+%Skdors landmarks diagram
+	\begin{figure}[H] 
+ 	\centering
+  	\includegraphics[width=12cm, height=12cm, keepaspectratio=true]
+  	{figures/AMNH_51327_dorsallandmarksdiagram.png}    
+    \caption {Landmarks (red) and curve (blue) for the dorsall skull pictures, further descriptions in table \ref{tab:skdors}. The specimen is a giant otter shrew tenrec, \textit{Potamogale velox}, AMNH 51327}
+  	\label{fig:skdors_landmarks}
+  	\end{figure}
+
+%Table with skdors landmark descriptions
+	\begin{table}[h]			
+	\centering
+	\caption{Descriptions of the landmarks (points) and curves (semilandmarks) for the skulls in dorsal view (see Figure \ref{fig:skdors_landmarks}).}
+	\input{tables/skdors.landmarks} 
+	\label{tab:skdors}  
+	\end{table}
+
+%--------------------------------------------------------------
+\subsubsection{Skulls: ventral view}
+	Most of the landmarks in this view are concentrated around the dentition and palate of the animals. We placed 13 landmarks and drew one outline curve (resampled to 60 semilandmark points) around the back of the skulls between landmarks 12 and 13 (figure \ref{fig:skvent_landmarks}). The high variability of the species’ basi-cranial region and difficulties associated with identifying developmentally or functionally homologous points precluded designation of additional landmarks towards the back of the skulls. Table \ref{tab:skvent} outlines the descriptions of the landmarks we placed on the ventral pictures.
+
+
+%Skvent diagram and landmarks description
+	\begin{figure}[H] 
+ 	\centering
+  	\includegraphics[width=12cm, height=12cm, keepaspectratio=true]
+  	{figures/skvent_landmarks_pot_vel.jpg}
+    \caption {Landmarks (red) and curve (blue) for the ventral skull pictures, further descriptions in table \ref{tab:skvent}. The specimen is a giant otter shrew tenrec, \textit{Potamogale velox}, NHML 1934.6.16.2}
+  	\label{fig:skvent_landmarks}
+  	\end{figure}
+
+
+% Skulls ventral landmarks
+	\begin{table}[h]
+	\caption{Descriptions of the landmarks (points) and curves (semilandmarks) for the skulls in ventral view (see Figure \ref{fig:skvent_landmarks}.} 
+	\input{tables/skvent.landmarks}
+	\label{tab:skvent}
+	\end{table}
+	
+%------------------------------------------------------
+\subsubsection{Skulls: lateral view}
+	We placed nine landmarks on the lateral pictures (see figure \ref{fig:sklat_landmarks}) and also drew two semilandmark curves between landmarks 7 and 8 to represent the shape of the back of the skull (resampled to 20 semilandmark points) and landmarks 8 and 1 (resampled to 15 semilandmark points) down the midline of the nose to represent the shape of the top of the skull. Table \ref{tab:sklat} describes the definitions for each of the landmark points. 
+	For specimens that were damaged on their right side we reflected photographs of the left lateral side of the skull so that all pictures would be in the same orientation.
+
+%Sklat diagram and landmarks description
+	\begin{figure}[H] 
+ 	\centering
+  	\includegraphics[width=12cm, height=12cm, keepaspectratio=true]
+  	{figures/sklat_landmarks_pot_vel.png}
+    \caption {Landmarks (red) and curve (blue) for the ventral skull pictures, further descriptions in table \ref{tab:skvent}. The specimen is a giant otter shrew tenrec, \textit{Potamogale velox}, NHML 1934.6.16.2}
+  	\label{fig:sklat_landmarks}
+  	\end{figure}
+
+
+% Skulls lateral landmarks
+	\begin{table}[h]
+	\caption{Descriptions of the landmarks (points) and curves (semilandmarks) for the skulls in lateral view (see Figure \ref{fig:sklat_landmarks}.} 
+	\input{tables/sklat.landmarks}
+	\label{tab:sklat}
+	\end{table}
+%-------------------------------------------
+\subsubsection{Mandibles}
+%Put in a description of the landmark mandibles
+
+%Mandibles landmark diagram
+	\begin{figure}[H] 
+ 	\centering
+  	\includegraphics[width=12cm, height=12cm, keepaspectratio=true]
+  	{figures/AMNH_51327_landmarksdiagram.png}
+    \caption {Landmarks (red) and curve (blue) for the mandible pictures, further descriptions in table \ref{tab:mands}. The specimen is a giant otter shrew tenrec, \textit{Potamogale velox}, AMNH 51327}
+  	\label{fig:mands_landmarks}
+  	\end{figure}
+
+%Table for the mandibles' landmark descriptions
+	\begin{table}[h]			
+	\centering
+	\caption{Descriptions of the landmarks (points) and curves (semilandmarks) for the mandibles in lateral (buccal) view (see figure \ref{fig:mands_landmarks})}
+	\input{tables/mandibles.landmarks}
+	\label{tab:mands} 
+	\end{table}
+%----------------------------------------------------------
+
+%Move some of these into the main paper
+%Come back to this section
+Figures  \ref{fig:sklatPCA} and \ref{fig:skventPCA} depict the morphospace plots derived from our principal components analyses of average Procrustes-superimposed shape coordinates for each species in our lateral and ventral skull data respectively. We used the principal components axes which accounted for 95\% of the cumulative variation (n = X axes for the lateral skulls analysis and n = X axes for the ventral skulls analysis) to calculate the disparity of each family. 
+
+In the analysis of skulls in lateral view, tenrecs had higher disparity than golden moles for all of the five metrics and they occupy a significantly different area of morphospace (npMANOVA, F=75.07, R$^{2}$ = 0.65,  p =0.001, figure \ref{fig:sklatPCA}).  
+
+
+%Sklat PCA
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=12cm, height=12cm, keepaspectratio=true]
+	{figures/sklat_tenrec+gmole_PCA.jpg}
+	\caption{Principal components plot of the lateral skulls' morphospace occupied by tenrecs (red, n=31) and golden moles (black, n=12). Axes are PC1 and PC2 of the average scores from a PCA analysis of mean Procrustes shape coordinates for each species. }
+	\label{fig:sklatPCA}
+	\end{figure}
+
+
+%--------------------------------------------------------
+In contrast, in the analysis of skulls in ventral view, tenrecs had higher disparity than golden moles in four of the five metrics but not when we calculated disparity as the sum of ranges.
+%*********** Remember I need to put in the disp tables here
+The two families occupy significantly different areas of morphospace (npMANOVA, F=100.74, r$^{2}$ = 0.71, p=0.001).
+
+%SkVent PCA
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=12cm, height=12cm, keepaspectratio=true]
+	{figures/skvent_tenrec+gmole_PCA.jpg}
+	\caption{Principal components plot of the ventral skulls' morphospace occupied by tenrecs (red, n=31) and golden moles (black, n=12). Axes are PC1 and PC2 of the average scores from a PCA analysis of mean Procrustes shape coordinates for each species. }
+	\label{fig:skventPCA}
+	\end{figure}
+
+
+
+\subsection{Comparison of non-\textit{Microgale} tenrecs}
+%-------------------------------------------------
+\section{Additional mandible analyses}
+
+In our main analysis we found that tenrecs
+
+
+%---------------------------------------------------------
+%Table of museum accession numbers
+%---------------------------------------------------------
+\section{Museum specimens}
+	%I need to fix the position of the caption
+	\input{tables/tenrec+gmole_skulls_taxonomy_longtable}
+	%  \label{tab:sk.taxonomy}%
+	%\end{table}%
+
+\bibliographystyle{jeb}
+\bibliography{Refs_01_05_14_edited}
+\end{document}
