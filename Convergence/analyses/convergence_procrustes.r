@@ -171,12 +171,18 @@ setwd("C:/Users/sfinlay/Desktop/Thesis/Convergence/output")
     #add dotted lines along 0,0
       abline(0,0, h=0, v=0, lty=2, lwd=1)
 
-      #legend('topright', legend = levels(sp.fam$Family), col = Fam.col,  border="black",
-              #cex = 0.8, pch = 16, bty="o", box.lty=1, ncol=2)
+      legend('topright', legend = levels(sp.fam$Family), col = Fam.col,  border="black",
+              cex = 0.8, pch = 16, bty="o", box.lty=1, ncol=1)
       #identify points on the graph
       #identify(xaxis,yaxis,labels=(sp.fam$Binom))
 
   #dev.off()
+
+#Just the legend on the background of a blank graph (need to crop the picture later)
+  #plot(xaxis, yaxis, xlab="", ylab="", las=1, col="white", bty="n", cex.lab=1, cex=1.2, xaxt="n", yaxt="n")
+  #legend('center', legend = levels(sp.fam$Family), col = Fam.col,  border="black",
+              #cex = 0.8, pch = 16, bty="o", box.lty=1, ncol=1)
+
 
 #Data: average shape coordinates, accompanying taxonomy and sps.meanPCA results
 
