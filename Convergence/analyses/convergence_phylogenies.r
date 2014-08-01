@@ -46,12 +46,12 @@ source("http://www.phytools.org/add.species.to.genus/v0.1/add.species.to.genus.R
     #sps.tax <- read.table(file="output/skvent/skvent_allfam_sps.mean_taxonomy.txt")
 
 #Sklat
-    sps.mean <- dget(file="output/sklat/sklat_allfam_sps.mean.txt")
-    sps.tax <- read.table(file="output/sklat/sklat_allfam_sps.mean_taxonomy.txt")
+    #sps.mean <- dget(file="output/sklat/sklat_allfam_sps.mean.txt")
+    #sps.tax <- read.table(file="output/sklat/sklat_allfam_sps.mean_taxonomy.txt")
 
 #Mands
-    #sps.mean <- dget(file="output/mands/mands_allfam_sps.mean.txt")
-    #sps.tax <- read.table(file="output/mands/mands_allfam_sps.mean_taxonomy.txt")
+    sps.mean <- dget(file="output/mands/mands_allfam_sps.mean.txt")
+    sps.tax <- read.table(file="output/mands/mands_allfam_sps.mean_taxonomy.txt")
 
     
 ###############################################
@@ -157,7 +157,7 @@ setwd("C:/Users/sfinlay/Desktop/Thesis/Convergence/output/phylogenies")
 #Skvent
   #write.tree(mytrees, file="skvent_allspecies_100trees.phy", append=FALSE)
 #Sklat
-  write.tree(mytrees, file="sklat_allspecies_100trees.phy", append=FALSE)
+  #write.tree(mytrees, file="sklat_allspecies_100trees.phy", append=FALSE)
 #Mands
-  #write.tree(mytrees, file="mands_allspecies_100trees.phy", append=FALSE)
+  write.tree(mytrees, file="mands_allspecies_100trees.phy", append=FALSE)
 
