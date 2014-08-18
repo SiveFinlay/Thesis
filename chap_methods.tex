@@ -1,5 +1,5 @@
 
-\chapter{Methods}
+\chapter{Data collection and processing}
 \label{chap:methods}
 
 \section{Introduction}
@@ -7,7 +7,7 @@
 	I compiled a morphological data set of both photographs and linear measurements from 366 specimens representing 101 species of small mammals. %(total number of skulls and species in Access Data base)
 	I collected morphological data from skulls, limbs and skins and here I included the details of how I compiled each of these data sets. I have only analysed the skulls' data in detail so the information I collected on limbs and skins represent significant resources for future work %put in reference to the future work section in the last chapter 
 	
-	I have divided my description of how the data were collected and analysed into four sections:
+	I have divided my description of how the data were collected and analysed into three sections:
 	
 	\begin{enumerate}[i]
 	
@@ -20,9 +20,7 @@
 	\item Error checking (section \ref{sect:errors}): \\
 	How I dealt with errors in taxonomic and specimen identification, possible variation associated with sex and age class, accuracy and repeatability of linear measurements and morphometric errors associated with photographing specimens and the placement of landmarks.
 	
-	
-	\item Quantifying disparity and convergence (section \ref{sect:data_analysis}):\\
-	Statistical approaches to measuring patterns of cranial diversity in small mammals.
+
 	
 	\end{enumerate} 
 
@@ -49,7 +47,7 @@
 %Species.measured table: I need to fill in the correct numbers
 
 \begin{table}[h]
-	\caption[Summary of species measured] 
+	\caption[Species measured] 
 	{The number of species I measured in each family compared to the total number of species in that family according to two sources; \citep{Wilson2005} and \citep{IUCN2012}}
 	\input{Methods/tables/species.measured}	
 	\label{tab:species.measured}
@@ -65,7 +63,7 @@
 %------------------------------------------------------
 
 
-\subsection{\normalfont{Museums' label data}}
+\subsection{\normalfont{Museum label data}}
 
 	I recorded all the data on the specimen labels including any handwritten or printed notes which had been added by other users of the collection. The label data included the museum specimen ID number, genus, species, sex, collector’s name, the date and location of where the specimen was collected. Some of the labels attached to skins had additional information such as the body, tail, hind foot and ear lengths as well as the body mass of the live individual. 
 	The level of detail recorded on the labels varied considerably (figure \ref{fig:museum.labels}). For example recently collected specimens were more likely to have detailed information about the collection location, and some specimens did not have even basic information such as the sex recorded. 
@@ -96,7 +94,7 @@
 % Skull and mandible measurements
 
 \begin{table}[h]
-	\caption[Description of the skull and mandible measurements]
+	\caption[Skull and mandible measurements]
 			{Skull and mandible measurements}% add to this caption
 	\input{Methods/tables/skulls.measurements}
 	\label{tab:sk.measurements}
@@ -105,7 +103,7 @@
 
 % Limb measurements
 \begin{table}[h]
-	\caption[Description of the limb measurements]
+	\caption[Limb measurements]
 		{Limb measurements} % add to this caption
 	\input{Methods/tables/limbs.measurements}
 	\label{tab:limb.measurements}
@@ -157,7 +155,7 @@
 
 	I used the TPS software suite \citep{Rohlf2013} to digitise landmarks and curves on my pictures. I set the scale on each pictures individually to standardise for the different camera heights I used when photographing my specimens. I created separate data files for each of my four morphometric analyses (skulls in dorsal, ventral and lateral views and mandibles in lateral view). I digitised landmarks and semilandmark points on each picture individually.
 
-	When combining landmark and semi-landmark approaches, there is a potential problem of over-sampling the curves (REFS). To determine the number of semilandmark points required to adequately summarise the curves in my data sets,  I followed the method outlined by MacLeod \citeyearpar{MacLeod2012}. For each data set I chose a random selection of pictures of specimens which represented the breadth of the morphological data (i.e. specimens from each sub-group of species). I drew the appropriate curves on each specimen and over-sampled the number of points on the curves. I measured the length of the line and regarded that as the 100\%, true length of that outline. I then re-sampled the curves with decreasing numbers of points and measured the length of the outlines. I calculated the length of each re-sampled curve as a percentage of the total length of the curve and then found the average percentage length for that reduced number of semilandamrk points across all of the specimens in my test file. I continued this process until I found the minimum number of points that gave a curve length which was at least 96\% accurate.  I repeated these curve-sampling tests for each analysis to determine the minimum number of semilandmark points which would give accurate representations of morphological shape.
+	When combining landmark and semi-landmark approaches, there is a potential problem of over-sampling the curves (REFS). To determine the number of semilandmark points required to adequately summarise the curves in my data sets,  I followed the method outlined by MacLeod \citeyearpar{MacLeod2012}. For each data set I chose a random selection of pictures of specimens which represented the breadth of the morphological data (i.e. specimens from each sub-group of species). I drew the appropriate curves on each specimen and over-sampled the number of points on the curves. I measured the length of the line and regarded that as the 100\%, true length of that outline. I then re-sampled the curves with decreasing numbers of points and measured the length of the outlines. I calculated the length of each re-sampled curve as a percentage of the total length of the curve and then found the average percentage length for that reduced number of semilandmark points across all of the specimens in my test file. I continued this process until I found the minimum number of points that gave a curve length which was at least 96\% accurate.  I repeated these curve-sampling tests for each analysis to determine the minimum number of semilandmark points which would give accurate representations of morphological shape.
 	
 	Here I summarise the landmarks and curves which I used on each of my different sets of pictures. For landmarks which are defined by dental structures, I used published dental formulae \citep{Nowak1983, MacPhee1987, KnoxJones1992, Marshall1996, Nagorsen2002, Goodman2006, Asher2008, ADW2013} where available to identify the number and type of teeth in each species.
 	
@@ -245,14 +243,14 @@
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=1\linewidth]{Methods/figures/AMNH_51327_landmarksdiagram.png}
-	\caption[Mandibles' landmarks]
+	\caption[Mandibles: landmarks]
 			{Landmarks (red) and curves (blue) used for the mandibles. Curves were re-sampled to the same number of evenly-spaced points. See table \ref{tab:mands} for description of curves and landmarks.\textit{Potamogale velox} (Tenrecidae) mandible, accession number: AMNH\_51327}
 	\label{fig:mands_landmarks}
 \end{figure}
 
 \begin{table}[!htb]			
 	\centering
-	\caption[Mandibles' landmarks]
+	\caption[Mandibles: landmarks]
 		{Descriptions of the landmarks (points) and curves (semilandmarks) for the mandibles in lateral (buccal) view (figure \ref{fig:mands_landmarks}}
 	\input{Methods/tables/mandibles.landmarks}
 	\label{tab:mands} 
@@ -334,37 +332,9 @@
 	%Effect size for the variance explained by each factor, based on inter landmark linear distances……..
 	%(I could also use PC scores or a Mahalanobis distance matrix…)
 
-%#########################################################
-%DATA ANALYSES
-%##################################################
-\section{Data Analysis}
-\label{sect:data_analysis}
-
-Introduction to the data analyses
-
-\subsection{\normalfont{Comparing tenrecs' diversity to their closest relatives}}
-%I copied most of this section from the methods part of my disparity paper
-
-	For each of the morphometric data sets (dorsal, ventral, lateral skulls and mandibles), I ran a general Procrustes alignment (section \ref{sect:procrustes}) of just my tenrec and golden mole specimens to compare morphological diversity in the two families. I used the principal components axes which accounted for 95 \% of the cumulative variation to calculate four disparity metrics; the sum and product of the range and variance of morphospace occupied by each family \citep{Brusatte2008, Foth2012, Ruta2013}. We also calculated morphological disparity directly from the Procrustes-superimposed shape data based on the sum of the squared inter-landmark distances among species pairs \citep[SSqDist,][]{Zelditch2012}.
-	
-	I used two approaches to test whether tenrecs have significantly different morphologies compared to golden moles. The first was a comparison of morphospace occupation between the two groups with non parametric MANOVAs \citep{Anderson2001} to test whether tenrecs and golden moles occupy significantly different areas of morphospace \citep[e.g][]{Serb2011, Ruta2013}. 
-	
-	Secondly, I used pairwise permutation tests to test the null hypothesis that tenrecs and golden moles have equal disparity. If this hypothesis were true then the designation of each species as belonging to either tenrecs or golden moles should be arbitrary because each group would have the same disparity. Therefore I permutated the data by assigning family identities at random to each specimen and calculated the differences in disparity for each of the new family groupings. I repeated these permutations 1000 times to generate a null distribution of the expected differences in family disparity. I compared the observed (true) measures of the differences in disparity between tenrecs and golden moles to these permutated distributions to test whether the families had significantly different levels of disparity.
-
-	The majority of tenrec species (19 out of 31 in my data) are members of the \textit{Microgale} (shrew-like) genus which is notable for its relatively low phenotypic diversity \citep{ Soarimalala2011, Jenkins2003}. The strong similarities among these species may mask signals of higher disparity among other tenrecs. Therefore I repeated my family-level comparisons of disparity with a reduced data set that excluded the \textit{Microgale} so that I could compare disparity within the remaining 12 tenrec species to disparity within the 12 species of golden moles.
 
 
 
-\subsection{\normalfont{Quantifying convergence among tenrecs and other small mammals}}
-
-
-%Phylogeny section from the original disparity paper; probably relevant when I go back to the convergence analyses
-
-\subsubsection{Phylogeny} % I still have the problem of subsubsections not getting numbered in the main text
-	Instead of basing my analyses on individual trees and assuming that their topologies are known without error \citep[e.g.][]{Ruta2013, Foth2012, Brusatte2008, Harmon2003} I used a distribution of 101 pruned phylogenies derived from the randomly resolved mammalian supertrees in \citep{Kuhn2011}. 
-		% I used 101 because that was the number in the smaller Fritz file - I could change it to 100 instead if 101 sounds odd?
-
-	Eight species (six \textit{Microgale} tenrecs and two golden moles) in my morphological data sets were not in the phylogenies. Phylogenetic relationships among the \textit{Microgale} have not been resolved more recently than the \citep{Kuhn2011} analysis, therefore I added the additional \textit{Microgale} species at random to the \textit{Microgale} genus within each phylogeny \citep{Revell2012}. I could not use the same approach to add the two missing golden mole species because they were the only representatives of their respective genera within my data. Therefore I randomly added these species to the common ancestral node (using the findMRCA function in phytools \citep{Revell2012}) of all golden moles within each phylogeny. Adding these extra species to the phylogenies created polytomies which I resolved arbitrarily using zero-length branches \citep{Paradis2004}. I calculated pairwise phylogenetic distances among species using the cophenetic function \citep{Team2014}. 
 
 
 

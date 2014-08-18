@@ -1,0 +1,22 @@
+\chapter{Convergence among tenrecs and other small mammals}
+\label{chap:convergence}
+
+
+\section{Introduction}
+
+\section{Methods}
+
+%Phylogeny section from the original disparity paper; probably relevant when I go back to the convergence analyses
+
+\subsection{Phylogeny} % I still have the problem of subsubsections not getting numbered in the main text
+	Instead of basing my analyses on individual trees and assuming that their topologies are known without error \citep[e.g.][]{Ruta2013, Foth2012, Brusatte2008, Harmon2003} I used a distribution of 101 pruned phylogenies derived from the randomly resolved mammalian supertrees in \citep{Kuhn2011}. 
+		% I used 101 because that was the number in the smaller Fritz file - I could change it to 100 instead if 101 sounds odd?
+
+	Eight species (six \textit{Microgale} tenrecs and two golden moles) in my morphological data sets were not in the phylogenies. Phylogenetic relationships among the \textit{Microgale} have not been resolved more recently than the \citep{Kuhn2011} analysis, therefore I added the additional \textit{Microgale} species at random to the \textit{Microgale} genus within each phylogeny \citep{Revell2012}. I could not use the same approach to add the two missing golden mole species because they were the only representatives of their respective genera within my data. Therefore I randomly added these species to the common ancestral node (using the findMRCA function in phytools \citep{Revell2012}) of all golden moles within each phylogeny. Adding these extra species to the phylogenies created polytomies which I resolved arbitrarily using zero-length branches \citep{Paradis2004}. I calculated pairwise phylogenetic distances among species using the cophenetic function \citep{Team2014}. 
+
+\subsection{Quantifying convergence}
+
+
+\section{Results}
+
+\section{Discussion}
