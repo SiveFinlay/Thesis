@@ -1,25 +1,31 @@
 %Species.measured table
+%To get the number measured for each Family, I counted the number of unique species in my Tb_Taxonomy Access table for that family
+%So it's the number of species measured overall but that doesn't necessarily mean that I have the same number in every data set
+%I didn't count the _sp. specimens as separate species
 
+%I took out the reference to the IUCN because it seems to only list species that are threatened/endangered rather than a full list of all species in a family
 
-\begin{tabular}{ll >{\centering\arraybackslash}m{2.5cm} >{\centering\arraybackslash}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}
+\begin{tabular}{llcc}
 
 \hline
-\textbf{Order} & \textbf{Family} & \textbf{Species measured} & \textbf{Species in MSW} & \textbf{Species in IUCN} \\
+\textbf{Order} & \textbf{Family} & \textbf{Species measured} & \textbf{Species in MSW} \\
 \hline
 %----------------------------------------------------
-Afrosoricida & Tenrecidae & X & 30 & 34\\
+Afrosoricida & Tenrecidae & 31 & 30 \\
 %-------------------------------------------------
-Afrosoricida & Chrysochloridae & X & 21 & 21\\
+Afrosoricida & Chrysochloridae & 12 & 21\\
 %----------------------------------------------------
-Erinaceomorpha & Erinaceidae & X & 24 & X\\
+Erinaceomorpha & Erinaceidae & 16 & 24 \\
 %----------------------------------------------------
-Soricomorpha & Soricidae & X & 376 & X\\
+Soricomorpha & Soricidae & 22 & 376 \\
 %----------------------------------------------------
-Soricomorpha & Solenodontidae & X & 4 & X\\
+Soricomorpha & Solenodontidae & 2 & 4 \\
 %----------------------------------------------------
-Soricomorpha & Talpidae & X & 39 & X\\
+Soricomorpha & Talpidae & 15 & 39 \\
 %----------------------------------------------------
-Notoryctemorphia & Notoryctidae & X & 2 & X\\
+Notoryctemorphia & Notoryctidae & 1 & 2 \\
 %-----------------------------------------------
 \hline
 \end{tabular}
+
+%*There are now 34 recognised tenrec species \citep{Olson2013}
