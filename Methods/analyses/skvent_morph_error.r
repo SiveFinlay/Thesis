@@ -4,6 +4,7 @@
 #7 different skulls, 3 pictures of each, 3 replicates of each picture
 
 library(geomorph)
+library(lmer)
 
 source("C:/Users/sfinlay/Desktop/Thesis/Disparity/functions/Disparity_general_functions.r")
 #source("C:/Users/sfinlay/Desktop/Thesis/Disparity/functions/DisparityFunctions_Variance_Range.r")
@@ -81,3 +82,20 @@ source("C:/Users/sfinlay/Desktop/Thesis/Disparity/functions/Disparity_general_fu
 
 # I think this means that 3.7% of the observed differences between species actually comes from morphometric error?
 #Need to do the nested ANOVA test next
+#--------------------------------------------------------------
+#Create a test data set to try out the nested ANOVA method
+
+#Use just PC1 as a response variable
+
+  pc1.data <- matrix(nrow=length(PC95axes[,1]), ncol=4)
+    colnames(pc1.data) <- c("PC1", "specimen","picture", "repli")
+
+      pc1.data[,1] <- PC95axes[,1]
+      pc1.data[,2] <- mydata$Binom
+      pc1.data[,3] <- rep(c(rep(1,3), rep(2,3), rep(3,3)),length(levels(mydata$SpecID)))
+      pc1.data[,4] <- rep(1:3, (nrow(pc1.data)/3)) 
+      
+test <- lmer(pc1.data[,1] ~ pc1.data[,2] + (pc1.data[,2] | pc1.data[,3]) + (pc1.data[,3] | pc1.data[,4]))
+summary(test)
+
+#I don't know if this is the right model or how to interpret it
