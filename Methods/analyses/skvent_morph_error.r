@@ -4,7 +4,7 @@
 #7 different skulls, 3 pictures of each, 3 replicates of each picture
 
 library(geomorph)
-library(lmer)
+library(lme4)
 
 source("C:/Users/sfinlay/Desktop/Thesis/Disparity/functions/Disparity_general_functions.r")
 #source("C:/Users/sfinlay/Desktop/Thesis/Disparity/functions/DisparityFunctions_Variance_Range.r")
@@ -95,7 +95,25 @@ source("C:/Users/sfinlay/Desktop/Thesis/Disparity/functions/Disparity_general_fu
       pc1.data[,3] <- rep(c(rep(1,3), rep(2,3), rep(3,3)),length(levels(mydata$SpecID)))
       pc1.data[,4] <- rep(1:3, (nrow(pc1.data)/3)) 
       
-test <- lmer(pc1.data[,1] ~ pc1.data[,2] + (pc1.data[,2] | pc1.data[,3]) + (pc1.data[,3] | pc1.data[,4]))
-summary(test)
+#Nested mixed effects model
+  lme.pc1 <- lmer(pc1.data[,1] ~ pc1.data[,2] + (pc1.data[,2] | pc1.data[,3]) + (pc1.data[,3] | pc1.data[,4]))
+#            PC1 data ~ skull + (skull | picture) + (picture | replicate)
+  summary(lme.pc1)
 
-#I don't know if this is the right model or how to interpret it
+#Need to check this
+
+#This is probably right but we also tried an alternative
+
+test2 <-lmer(pc1.data[,1] ~ pc1.data[,2] + (pc1.data[,2] | pc1.data[,3]) + (pc1.data[,2] | pc1.data[,4]))
+#            PC1 data ~ skull + (skull | picture) + (skull | replicate)
+summary(test2) 
+
+#Check the same approach for PC2 data
+
+  pc2.data <- pc1.data
+  pc2.data[,1] <- PC95axes[,2]
+  colnames(pc2.data) <- c("PC2", "specimen", "picture", "repli")
+
+  lme.pc2 <- lmer(pc2.data[,1] ~ pc2.data[,2] + (pc2.data[,2] | pc2.data[,3]) + (pc2.data[,3] | pc2.data[,4]))
+#            PC2 data ~ skull + (skull | picture) + (picture | replicate)
+  summary(lme.pc2)     # This doesn't work properly: intercepts are 0
