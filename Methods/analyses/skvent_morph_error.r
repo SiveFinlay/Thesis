@@ -99,21 +99,29 @@ source("C:/Users/sfinlay/Desktop/Thesis/Disparity/functions/Disparity_general_fu
   lme.pc1 <- lmer(pc1.data[,1] ~ pc1.data[,2] + (pc1.data[,2] | pc1.data[,3]) + (pc1.data[,3] | pc1.data[,4]))
 #            PC1 data ~ skull + (skull | picture) + (picture | replicate)
   summary(lme.pc1)
+#Breakdown the model to interpret the results
+  #Linear model with just the fixed effect
+       lm.pc <- lm (pc1.data[,1] ~ pc1.data[,2]) #same intercept and fixed effect as the lme.pc1 model
+       
+  #With one random effect
+    lme.rn <-lmer(pc1.data[,1] ~ pc1.data[,2] + (pc1.data[,2] | pc1.data[,3])) 
+       
+#The overall variance in the full lme.pc1 model is the same as in the lme.rn model: so it's just partitioned 
+  #between the two random effects in the full model
+  
+      #Variance explained by picture and replicate are the intercepts and std.dev of the random effects
+        #Higher variance due to landmarking error ( 7.4e-14) compared to error from photography (2.76e-16)
+        #But still a negligible error overall compared to the fixed effect
 
-#Need to check this
+#Same approach for PC2
 
-#This is probably right but we also tried an alternative
 
-test2 <-lmer(pc1.data[,1] ~ pc1.data[,2] + (pc1.data[,2] | pc1.data[,3]) + (pc1.data[,2] | pc1.data[,4]))
-#            PC1 data ~ skull + (skull | picture) + (skull | replicate)
-summary(test2) 
+  pc2.data <- matrix(nrow=length(PC95axes[,2]), ncol=4)
+    colnames(pc2.data) <- c("PC2", "specimen","picture", "repli")
 
-#Check the same approach for PC2 data
+      pc2.data[,1] <- PC95axes[,2]
+      pc2.data[,2] <- mydata$Binom
+      pc2.data[,3] <- rep(c(rep(1,3), rep(2,3), rep(3,3)),length(levels(mydata$SpecID)))
+      pc2.data[,4] <- rep(1:3, (nrow(pc1.data)/3)) 
 
-  pc2.data <- pc1.data
-  pc2.data[,1] <- PC95axes[,2]
-  colnames(pc2.data) <- c("PC2", "specimen", "picture", "repli")
-
-  lme.pc2 <- lmer(pc2.data[,1] ~ pc2.data[,2] + (pc2.data[,2] | pc2.data[,3]) + (pc2.data[,3] | pc2.data[,4]))
-#            PC2 data ~ skull + (skull | picture) + (picture | replicate)
-  summary(lme.pc2)     # This doesn't work properly: intercepts are 0
+  lme.pc2 <- lmer(pc2.data[,1] ~ pc2.data[,2] + (pc2.data[,2] | pc2.data[,3]) + (pc2.data[,3] | pc2.data[,4]))        
