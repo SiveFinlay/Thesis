@@ -188,10 +188,10 @@ Wilson and Reader \citeyearpar{Wilson2005} record 30 species of tenrec but more 
 
 	I used a combination of landmark and semilandmark analysis approaches to assess the shape variability in my skull and mandible specimens specimens. 
 
-	I used the TPS software suite \citep{Rohlf2013} to digitise landmarks and curves on my pictures. I set the scale on each pictures individually to standardise for the different camera heights I used when photographing my specimens. I created separate data files for each of my four morphometric analyses (skulls in dorsal, ventral and lateral views and mandibles in lateral view). I digitised landmarks and semilandmark points on every picture individually. Some specimens were too damaged to use so I had a slightly different total number of images for each analysis: skulls dorsal (356), ventral (346), lateral (336) and mandibles (356).
+	I used the TPS software suite \citep{Rohlf2013} to digitise landmarks and curves on my pictures. I set the scale on each pictures individually to standardise for the different camera heights I used when photographing my specimens. I created separate data files for each of my four morphometric analyses (skulls in dorsal, ventral and lateral views and mandibles in lateral view). I digitised landmarks and semilandmark points on every picture individually. Some specimens were too damaged to use so I had a different total number of images for each analysis: skulls dorsal (356), ventral (346), lateral (336) and mandibles (356).
 	%Numbers are from the two_family_disparity script after cleaning up the data to remove damages specimens
 
-	When combining landmark and semi-landmark approaches, there is a potential problem of over-sampling the curves \citep{MacLeod2012}. To determine the number of semilandmark points required to adequately summarise the curves in my data sets,  I followed the method outlined by MacLeod \citeyearpar{MacLeod2012}. For each data set I chose a random selection of pictures of specimens which represented the breadth of the morphological data (i.e. specimens from each sub-group of species). I drew the appropriate curves on each specimen and over-sampled the number of points on the curves. I measured the length of the line and regarded that as the 100\%, true length of that outline. I then re-sampled the curves with decreasing numbers of points and measured the length of the outlines. I calculated the length of each re-sampled curve as a percentage of the total length of the curve and then found the average percentage length for that reduced number of semilandmark points across all of the specimens in my test file. I continued this process until I found the minimum number of points that gave a curve length which was at least 95\% accurate.  I repeated these curve-sampling tests for each analysis to determine the minimum number of semilandmark points which would give accurate representations of morphological shape.
+	When combining landmark and semilandmark approaches, there is a potential problem of over-sampling the curves \citep{MacLeod2012}. To determine the number of semilandmark points required to adequately summarise the curves in my data sets I followed the method outlined by MacLeod \citeyearpar{MacLeod2012}. For each data set I chose a random selection of pictures of specimens which represented the breadth of the morphological data (i.e. specimens from each sub-group of species). I drew the appropriate curves on each specimen and over-sampled the number of points on the curves. I measured the length of the line and regarded that as the 100\%, true length of that outline. I then re-sampled the curves with decreasing numbers of points and measured the length of the outlines. I calculated the length of each re-sampled curve as a percentage of the total length of the curve and then found the average percentage length for that reduced number of semilandmark points across all of the specimens in my test file. I continued this process until I found the minimum number of points that gave a curve length which was at least 95\% accurate.  I repeated these curve-sampling tests for each analysis to determine the minimum number of semilandmark points which would give accurate representations of morphological shape.
 	
 	Here I summarise the landmarks and curves which I used on each of my different sets of pictures. For landmarks which are defined by dental structures, I used published dental sources \citep{Repenning1967, Eisenberg1969, Nowak1983, MacPhee1987, KnoxJones1992, Davis1997, Querouil2001, Nagorsen2002, Wilson2005, Goodman2006, Karatas2007, Hoffmann2008, Asher2008, Lin2010,  Muldoon2009} where available to identify the number and type of teeth in each species.
 	
@@ -241,13 +241,15 @@ Wilson and Reader \citeyearpar{Wilson2005} record 30 species of tenrec but more 
 	I placed nine landmarks on the lateral pictures (figure \ref{fig:sklat_mands}) and also drew two semilandmark curves between landmarks 7 and 8 to represent the shape of the back of the skull (resampled to 20 semilandmark points) and landmarks 8 and 1 (resampled to 15 semilandmark points) down the midline of the nose to represent the shape of the top of the skull. Table \ref{tab:sklat} describes my definitions for each of the landmark points.
 	If specimens were damaged on their right side I reflected photographs of the left lateral side of the skull so that all pictures would be in the same orientation.
 	I originally tried to include more landmarks around the infraorbital foramina (IF) as a crude measure of facial sensitivity and because the IF area is correlated with ecotypes \citep{Crumpton2012}. However, it proved impossible to see the boundaries of the IF in many species and single landmark points could not represent the shape of the full foramina. 
+% NC: So did you include these or not? If not don't mention it.
 
 \subsection{\normalfont{Mandibles}}
-	I placed seven landmarks and drew four curves on each mandible picture (again, reflecting any pictures of the left mandible so they could be compared to pictures of the right side, figure \ref{fig:sklat_mands}). I drew separate curves around each of the three processes of the ascending ramus; coronoid, condyloid and angular and along the base of the horizontal ramus of the jaw. While obviously part of an integrated jaw unit, the development of the mandibular processes are also, in some aspects, independent since they attach different muscles which exert different masticatory forces on the jaw \citep{Barrow2008}. Therefore, by drawing separate curves around each of these elements, my ensuing analyses could assess the relative shape changes of different components of the jaw with relevance to variation in feeding strategies and capabilities.
+	I placed seven landmarks and drew four curves on each mandible picture (again, reflecting any pictures of the left mandible so they could be compared to pictures of the right side, figure \ref{fig:sklat_mands}). I drew separate curves around each of the three processes of the ascending ramus: coronoid, condyloid and angular and along the base of the horizontal ramus of the jaw. While obviously part of an integrated jaw unit, the development of the mandibular processes are also, in some aspects, independent since they attach different muscles which exert different masticatory forces on the jaw \citep{Barrow2008}. Therefore, by drawing separate curves around each of these elements, my analyses could assess the relative shape changes of different components of the jaw with relevance to variation in feeding strategies and capabilities.
 
 %********
 %Why do we care about independence??
 %I don’t like how I’ve phrased the above paragraph but I just thought it was a nice point in the Barrow paper so I want to include it somewhere.
+% NC: It's nice yes, but is it relevant? Or necessary?
 %********
 
 %---------------------------------------------------
@@ -289,7 +291,8 @@ Wilson and Reader \citeyearpar{Wilson2005} record 30 species of tenrec but more 
 
 	After creating my files with the landmarks and semilandmarks placed on each picture, I used TPSUtil \citep{Rohlf2012} to create "sliders" files that defined which points in the TPS files should be treated as semilandmarks \citep{Zelditch2012}. I conducted all further morphometric analyses in R version 3.0.2 \citep{Team2014} within the geomorph package \citep{Adams2013}.
 	
-	I placed landmarks and semilandmarks on all the pictures from every specimen. However, for the purposes of comparing morphological diversity in tenrecs to their closest relatives (chapter \ref{chap:disparity} I only used the tenrec and golden mole subset of the data. However, the TPS files containing landmark coordinates for all remaining species could be used for future analyses of morphological convergence (see discussion in chapter \ref{chap:discussion}). 
+	% NC: Not needed - of course you'd do it for every picture. And you can discuss the extra uses of the data in the discussion
+	%I placed landmarks and semilandmarks on all the pictures from every specimen. However, for the purposes of comparing morphological diversity in tenrecs to their closest relatives (chapter \ref{chap:disparity} I only used the tenrec and golden mole subset of the data. However, the TPS files containing landmark coordinates for all remaining species could be used for future analyses of morphological convergence (see discussion in chapter \ref{chap:discussion}). 
 	
 	I used the gpagen function in the geomorph package \citep{Adams2013} to run a general Procrustes alignment \citep{Rohlf1993} of the landmark coordinates while sliding the semilandmarks by minimising Procrustes distance \citep{Bookstein1997}.
 	I used these Procrustes-aligned coordinates of all specimens to calculate average shape values for each species which I then used for a principal components (PC) analysis with the plotTangentSpace function \citep{Adams2013}. 
@@ -299,19 +302,24 @@ Wilson and Reader \citeyearpar{Wilson2005} record 30 species of tenrec but more 
 
 %I'm not sure whether this is the most appropriate way to deal with errors: I could split up the sections and put them at the end of each of the previous sections rather than breaking up the story here but that might be more fragmented overall
 
+% NC: I think this can probably be reintegrated mostly with the rest of the section. Only 5 is really relevant. So maybe just have a section on "Potential morphometrics errors" rather than error checking? Or add as a subsection to the 2D data collection?
+
 \section{Error checking}
 \label{sect:errors}
-	My data are prone to a number of different error sources. These include 1) taxonomic identification which has not been updated to currently accepted terms, 2) specimen ID errors, 3) possible variation associated with sex and age class of individuals, 4) the accuracy and repeatability with which species traits are measured, 5) morphometric errors associated with photographing specimens and the placement of landmarks. I address each of these possible sources of error below.  
+	My data are prone to a number of different sources of error. These include 1) taxonomic identification which has not been updated to currently accepted names, 2) specimen identification errors, 3) possible variation associated with sex and age class of individuals, 4) the accuracy and repeatability with which species traits are measured, 5) morphometric errors associated with photographing specimens and the placement of landmarks. I address each of these possible sources of error below.  
 
 \subsection{\normalfont{Taxonomic}}
 	I recorded species names as they were written on museum specimen labels and then corrected them to match the taxonomy in Wilson and Reeder's Mammal Species of the World \citeyearpar{Wilson2005}. For recently identified species, such as \textit{Microgale jobihely} \citep{Goodman2006}, which are not included in Wilson and Reeder \citeyearpar{Wilson2005}, I used the taxonomy recorded on the labels. 
+	% NC: Haven't you already said this in data collection above? Maybe just pop it in the relevant place?
 
-\subsection{\normalfont{Specimen ID}}
+\subsection{\normalfont{Specimen identification}}
 	%add in Natalie's centroid means?
+	% NC: So this is only an issue for these four? If so maybe pop into supp material as you don't use them
 	
-	There were four specimens from the Smithsonian Institute that had species labels which did not match between skulls and skins with the same specimen ID numbers. The four skulls were labelled as \textit{Hemicentetes semispinosus}. The corresponding skins were originally labelled as \textit{H. semispinosus} but this was crossed out and changed to \textit{H. nigriceps}. The re-labelled skins looked clearly different to the undisputed \textit{H. semispinosus} skins and also look more similar to other pictures of \textit{H. nigriceps}. Therefore, I made the assumption that the re-labelling of the skins as \textit{H. nigriceps} represents the true taxonomy and I treated the corresponding skulls as \textit{H. nigriceps}.
+	There were four specimens from the Smithsonian Institute that had species labels which did not match between skulls and skins with the same specimen ID numbers. The four skulls were labeled as \textit{Hemicentetes semispinosus}. The corresponding skins were originally labeled as \textit{H. semispinosus} but this was crossed out and changed to \textit{H. nigriceps}. The re-labeled skins looked clearly different to the undisputed \textit{H. semispinosus} skins and also look more similar to other pictures of \textit{H. nigriceps}. Therefore, I made the assumption that the re-labeling of the skins as \textit{H. nigriceps} represents the true taxonomy and I treated the corresponding skulls as \textit{H. nigriceps}.
 
 \subsection{\normalfont{Specimen sex and age}}
+% NC: could just mention this when talking about how you selected specimens to measure since you don't actually quantify or fix the error.
 
 	Age classification of mammal skulls is usually based on dental characteristics and cranial fusion.
  	However, it is difficult to age-classify tenrecs in this way. In some species the last molar does not erupt fully until the first molar has been shed so the full dentition is never present at any one time \citep{Nowak1983}. Furthermore, it is difficult to distinguish deciduous from permanent teeth in \textit{Microgale} tenrecs \citep{Asher2008} which has led to confusion and misidentification of juvenile forms as separate species \citep{Olson2004}.
@@ -322,6 +330,7 @@ Wilson and Reader \citeyearpar{Wilson2005} record 30 species of tenrec but more 
 \subsection{\normalfont{Linear measurements}}
 	%Maybe this isn't relevant anymore since I'm not actually doing anything with the linear measurement data?
 	%I've kept it in for the moment as a reference incase anyone wants to use the data in the future
+	% NC: Yeah I'd pop this into the supp material
 	
 	As mentioned above (section \ref{sect:measurements}), I took three replicate measurements of most of my variables and five replicates of other, smaller variables. 
 	Some morphometric studies take replicate measurements of a trait and use the average value for further analyses (REFS?). Rather than taking the mean of each of three (or five) measures, I used the median as it is less likely to be skewed by outliers and gives a more accurate representation of the true value of the trait (REFS?).
@@ -344,7 +353,8 @@ Wilson and Reader \citeyearpar{Wilson2005} record 30 species of tenrec but more 
 
 \subsection{\normalfont{Potential morphometrics errors}}
 
-	I used 2D morphometrics to compare the morphologies of the skulls (section \ref{sect:morphometrics}). The small size of my specimens, combined with the number of specimens involved in my study made 3D imaging impractical. It takes roughly 1.5 hours for a good quality scan of each specimen so it would have taken me at least 550 hours to scan the 366 specimens that I photographed.
+    % NC: Not relevant
+	%I used 2D morphometrics to compare the morphologies of the skulls (section \ref{sect:morphometrics}). The small size of my specimens, combined with the number of specimens involved in my study made 3D imaging impractical. It takes roughly 1.5 hours for a good quality scan of each specimen so it would have taken me at least 550 hours to scan the 366 specimens that I photographed.
 	 
 	While 2D methods are an accepted means of comparing morphological shape \citep[e.g.][]{Adams2004, Mitteroecker2009}, particularly for comparing skull morphologies of small mammals \citep[e.g.][]{Cardini2003, Panchetti2008, White2008, Barrow2008, Scalici2011}, the inherent discrepancies associated with comparing three dimensional objects using two dimensional pictures can introduce some potential problems of possible image distortion \citep{Arnqvist1998}. Similarly, human error with how landmarks are positioned on specimens could also introduce noise into further analyses. 
 	
@@ -356,18 +366,17 @@ Wilson and Reader \citeyearpar{Wilson2005} record 30 species of tenrec but more 
 	%Need to fix this reference: it's okay in the bibliography but it doesn't all show up here
 
 	To measure potential orientation error, I photographed the skulls (dorsal, ventral and lateral views) and mandibles of each specimen three times, cycling through the pictures so that the specimen was removed and re-positioned before every shot \citep{Viscosi2011}.
-	I used a subset of my ventral skull pictures to test for two sources of error: specimen orientation and landmark placement error \citep{Arnqvist1998, Barrow2008}. Of the specimens which I photographed three times,  I chose a random subset of seven skulls from four different Families: 3 tenrecs and single representatives of shrews, moles, hedgehogs and golden moles. I copied these images and placed landmarks on three copies of each image to compare variation in landmark placement within each orientation (three copies of the one image). This gave 9 replicates of each skull: 3 separate pictures, and 3 copies of each of those pictures. As before, I ran a general Procrustes alignment \citep{Rohlf1993} of the specimens, calculated the average shape values for each skull (average of all 9 pictures) and used these values for a PC analysis. 
+	I used a subset of my ventral skull pictures to test for two sources of error: specimen orientation and landmark placement error \citep{Arnqvist1998, Barrow2008}. Of the specimens which I photographed three times,  I chose a random subset of seven skulls from four different Families: three tenrecs and single representatives of shrews, moles, hedgehogs and golden moles. I copied these images and placed landmarks on three copies of each image to compare variation in landmark placement within each orientation (three copies of the one image). This gave nine replicates of each skull: three separate pictures, and three copies of each of those pictures. As before, I ran a general Procrustes alignment \citep{Rohlf1993} of the specimens, calculated the average shape values for each skull (average of all nine pictures) and used these values for a principal components (PC) analysis. 
 		
-	I used a nested, linear mixed effects model to model the shape variation (first PC axis) associated with specimen(fixed effect) and two nested random effects: picture identity and picture replicate. I ran the test using the lmer function in the lme4 package \citep{Bates2014}. The model formula was:\\ 
-	lmer(PC1 ~ specimen + (specimen|picture) + (picture|replicate)).
+	I used a linear mixed effects model to model the shape variation (first PC axis) associated with specimen (fixed effect) and two nested random effects: picture identity nested within specimen and picture replicate nested within picture. I ran the test using the lmer function in the lme4 package \citep{Bates2014}. % NC: Need to explain more clearly what you mean here. Why the nesting? What would a sig result show you?
 
+	Specimen orientation and landmark placement had negligible effects on the overall shape variation between different skulls (2.76 x 10\textsuperscript{-16} $\pm$ 1.66 x 10\textsuperscript{-8} and 7.4 x 10\textsuperscript{-14} $\pm$ 2.72 x 10\textsuperscript{-7} respectively). % NC: What are these numbers? Estimates? Effect sizes?
 	
-	Specimen orientation and landmark placement had negligible effects on the overall shape variation between different skulls (2.76 x 10\textsuperscript{-16} $\pm$ 1.66 x 10\textsuperscript{-8} and 7.4 x 10\textsuperscript{-14} $\pm$ 2.72 x 10\textsuperscript{-7} respectively). 
-	
-	Therefore, I was confident that shape variation between the specimens in the rest of my analyses reflected true morphological differences rather than methodological error.
+	Therefore, I am confident that shape variation between the specimens in the rest of my analyses reflected true morphological differences rather than methodological error.
 %----------------------------------------------------
 %Do I need a summary at the end to tie into the next chapter?
 
+% NC: Nope!
 
 
 
