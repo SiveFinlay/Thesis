@@ -13,16 +13,11 @@
 	\begin{enumerate}[i]
 	
 	\item Data collection (section \ref{sect:datacollection}): \\
-	Summary of the species measured, information recorded from museum labels and photographic set up.
+	Summary of the species measured, taxonomic identification,  photographic set up and image processing.
 	
 	\item Geometric morphometric analyses (section \ref{sect:morphometrics}):\\
 	Landmark and semilandmark placement on different views of skulls and mandibles.
 	
-	%Combine the error checking into the rest of the description: 
-	%COME BACK TO HERE
-	
-	%\item Error checking (section \ref{sect:errors}): \\
-	%How I dealt with errors in taxonomic and specimen identification, possible variation associated with sex and age class, accuracy and repeatability of linear measurements and morphometric errors associated with photographing specimens and the placement of landmarks.
 	
 	\item Additional data collection (appendix \ref{appendix}) \\
 	In this thesis I only analysed a subset of the total data that I collected. Therefore, the additional data represent a significant resource for future work. I have documented collection of these data (linear measurements of skulls and limbs and photographs of skins) in appendix \ref{appendix} at the end of my thesis.
@@ -39,53 +34,45 @@
 
 \subsection{\normalfont{Species measured and taxonomy}}
 
-	Between January and September 2013, I spent a total of 9 weeks working in the collections of five museums: the Natural History Museum, London (BMNH), the Smithsonian Institute Natural History Museum, Washington D.C. (SI), the American Museum of Natural History, New York (AMNH), Museum of Comparative Zoology, Cambridge (MCZ) and the Field Museum of Natural History, Chicago (FMNH). I measured and photographed 366 skulls, 248 post-cranial skeletons and 277 skins from 101 species belonging to seven Families within four Orders: Afrosoricida (Tenrecidae, Chrysochloridae), Erinaceomorpha (Erinaceidae), Soricomorpha (Soricidae, Solenodontidae, Talpidae) and Notoryctemorphia (Notoryctidae). 
+	Between January and September 2013, I spent a total of 9 weeks working in the collections of five museums: the Natural History Museum, London (BMNH), the Smithsonian Institute Natural History Museum, Washington D.C. (SI), the American Museum of Natural History, New York (AMNH), Museum of Comparative Zoology, Cambridge M.A. (MCZ) and the Field Museum of Natural History, Chicago (FMNH). I measured and photographed 366 skulls, 248 post-cranial skeletons and 277 skins from 101 species belonging to seven Families within four Orders: Afrosoricida (Tenrecidae, Chrysochloridae), Erinaceomorpha (Erinaceidae), Soricomorpha (Soricidae, Solenodontidae, Talpidae) and Notoryctemorphia (Notoryctidae). 
 
 	I measured all the tenrecs and golden moles available in the collections (31 species of tenrec, 12 species of golden moles out of 34 and 21 species in each Family respectively, table \ref{tab:species.measured}). 
-	For my comparative species of non-Afrosoricida species, I chose a random sample of 56 taxa 
-	%non tenrec or golden mole species in the Access data base 
-	which have been previously identified as convergent with tenrecs \citep[e.g.][]{Gould1966, Symonds2005, Poux2008, Olson2013}. I followed the taxonomy of Wilson and Reeder's Mammal Species of the World \citeyearpar[MSW,][]{Wilson2005}.
-	Table \ref{tab:species.measured} outlines the number of species I measured from each Family and how this sample relates to the overall number of species in that group as recorded in Mammal Species of the World \citeyearpar{Wilson2005}.
+	For my comparative species of non-Afrosoricida species, I chose a random sample of 56 taxa which have been previously identified as convergent with tenrecs \citep[e.g.][]{Gould1966, Symonds2005, Poux2008, Olson2013}. I only analysed the Afrosoricida species for this thesis, details about the additional taxa can be found in appendix \ref{appendix}.
 	
+	I recorded species names as they were written on museum specimen labels and then corrected them to match the taxonomy in Wilson and Reeder's Mammal Species of the World \citeyearpar{Wilson2005}. For recently identified species,  which are not included in Wilson and Reeder \citeyearpar{Wilson2005} I used the taxonomy recorded on the specimen labels.
+
 	Wilson and Reader \citeyearpar{Wilson2005} record 30 species of tenrec but more recent studies indicate that there are now 34 species\citep[][Table \ref{tab:species.measured}]{Olson2013}. The additional species belong to the shrew tenrec (\textit{Microgale}) Genus and represent either recognition of cryptic species boundaries \citep{Olson2004} or discovery of new species \citep{Goodman2006, Olson2009}. Only one of these four recent additions, \textit{M. jobihely}, was present in the museum collections and therefore I could not include the three other newly recognised species in my analyses.
 
-% NC: I don't understand the paragraph below. Might be better to mention the taxonomy used somehwere else. Especially as you've already been using in the paragraphs above...The phylogeny is actually the bininda emonds tree right?
-	%SF: Probably makes sense to remove this paragraph?
-		%Following the taxonomy in Wilson and Reeder's Mammal Species of the World (MSW) \citeyearpar{Wilson2005}, I used phylogenies for each Order to select species at random which represented the main sub-branches and morphological diversity of each Order. For example, within the Soricomorpha, I only included three %number of Crocidura species in Access data base
-		%species of \textit{Crocidura} (out of a total of 230, Wilson and Reeder \citeyear{Wilson2005}) but both species of \textit{Solenodon} because it represents a separate subgroup to the rest of the Order. 
+	Table \ref{tab:species.measured} outlines the number of species I measured from each Family and how this sample relates to the overall number of species in that Family.
 
-
-%####################################################
+%------------------------------------------------
 %Species.measured table
 
 %I added the %coverage, still need to figure out spacing for the centred columns
 
 \begin{table}[h]
 	\caption[Species measured] 
-	{The number of species measured in each Family compared to the total number of species in that Family (Coverage is the percentage of species from each Family that are represented in my data). The total number of species in each family is according to Mammal Species of the World version 3 \citeyear{Wilson2005} with the exception of the Tenrecidae: \citep{Wilson2005} record 30 species of tenrec but there are now 34 species identified \citep{Olson2013}.}
+	{The number of species measured in each Family compared to the total number of species in that Family (coverage is the percentage of species from each Family that are represented in my data). The total number of species in each family is according to Mammal Species of the World version 3 \citep{Wilson2005} with the exception of the Tenrecidae: there are now 34 identified species compared to 30 recognised in Wilson and Reeder (\citeyear{Wilson2005}).}
 	\input{Methods/tables/species.measured}	
 	\label{tab:species.measured}
 \end{table}
  
-%####################################################
+%-----------------------------------------#
+
+	%Moved this paragraph up from the error checking
+	I included both male and female specimens in my data as I am interested in cranial shape of the species as a whole regardless of whether or not there are differences due to sexual size dimorphism. Age classification of mammal skulls is usually based on dental characteristics and cranial fusion but it is difficult to classify tenrecs in this way. In some species the last molar does not erupt fully until the first molar has been shed so the full dentition is never present at any one time \citep{Nowak1983}. Furthermore, it is difficult to distinguish deciduous from permanent teeth in \textit{Microgale} tenrecs \citep{Asher2008} which has led to confusion and misidentification of juvenile forms as separate species \citep{Olson2004}.
+	Therefore, I identified and excluded any obviously juvenile specimens based on incomplete cranial fusion. When specimens could not be obviously identified as juveniles I treated them all as equivalent adult forms. 	
 
 
 
-%------------------------------------------------------
-
-
-\subsection{\normalfont{Specimen labels}}
-
-	I recorded all the data on the specimen labels including any handwritten or printed notes which had been added by other users of the collection. The label data included the museum specimen accession number, Genus, species, sex, collector's name, and the date and location of collection. Some of the labels attached to skins had additional information such as the body, tail, hind foot and ear lengths as well as the body mass of the live individual. 
-	
 %------------------------------------------------
-%Moved the linear measurements into the appendix
+%Moved the specimen labels and linear measurements into the appendix
 %-----------------------------------------
 \subsection{\normalfont{Photographing specimens}}
 
 	In order to get 2D landmarks for my specimens, I first had to photograph them. I used photographic copy stands consisting of a camera attachment with an adjustable height bar, a flat stage on which to place the specimen and an adjustable light source. To take possible light variability into account, on each day I took a photograph of a white sheet of paper and used the custom white balance function on the camera to set the image as the baseline "white" measurement for those particular light conditions.
 	
-	I photographed the specimens with a Canon EOS 650D camera fitted with either an EF 100 mm f/2.8 Macro USM lens (skulls and limbs) or EFS 18-55 mm lens (skins). I used a remote control (h\"ahnel Combi TF) to take the photos to avoid shaking the camera and distorting the images. I photographed the specimens on a black material background. I placed the light source from the top left-hand corner of the photograph and positioned a piece of white card on the bottom right side of the specimen which reflected the light back onto the specimen and minimised any shadows (figure \ref{fig:camera}). I used small bean bags as necessary to hold the specimens in position while being photographed to ensure that the specimen lay in a flat plane relative to the camera and did not tilt in any direction. I used the grid-line function on the live-view display screen of the camera to position the specimens in the centre of each image. 
+	I photographed the specimens with a Canon EOS 650D camera fitted with a EF 100 mm f/2.8 Macro USM lens. I used a remote control (H\"ahnel Combi TF) to take the photos to avoid shaking the camera and distorting the images. I photographed the specimens on a black material background. I placed the light source from the top left-hand corner of the photograph and positioned a piece of white card on the bottom right side of the specimen which reflected the light back onto the specimen and minimised any shadows (figure \ref{fig:camera}). I used small bean bags as necessary to hold the specimens in position while being photographed to ensure that the specimen lay in a flat plane relative to the camera and did not tilt in any direction. I used the grid-line function on the live-view display screen of the camera to position the specimens in the centre of each image. 
 
 %----------------------------------------------
 %Camera picture
@@ -114,22 +101,22 @@
 \subsection{\normalfont{Landmark placement on images}}
 
 
-	I used a combination of landmark and semilandmark analysis approaches to assess the shape variability in my skull and mandible specimens specimens. 
+	I used a combination of landmark and semilandmark analysis approaches to assess the shape variability in my skull and mandible specimens. 
 
-	I used the TPS software suite \citep{Rohlf2013} to digitise landmarks and curves on my pictures. I set the scale on each pictures individually to standardise for the different camera heights I used when photographing my specimens. I created separate data files for each of my four morphometric analyses (skulls in dorsal, ventral and lateral views and mandibles in lateral view). I digitised landmarks and semilandmark points on every picture individually. Some specimens were too damaged to use so I had a different total number of images for each analysis: skulls dorsal (356), ventral (346), lateral (336) and mandibles (356).
+	I used the TPS software suite \citep{Rohlf2013} to digitise landmarks and curves on the photos. I set the scale on each image individually to standardise for the different camera heights I used when photographing my specimens. I created separate data files for each of my four morphometric analyses (skulls in dorsal, ventral and lateral views and mandibles in lateral view). I digitised landmarks and semilandmark points on every image individually. Some specimens were too damaged to use so I had a different total number of images for each analysis: skulls dorsal (356), ventral (346), lateral (336) and mandibles (356).
 	%Numbers are from the two_family_disparity script after cleaning up the data to remove damages specimens
 
-	When combining landmark and semilandmark approaches, there is a potential problem of over-sampling the curves \citep{MacLeod2012}. To determine the number of semilandmark points required to adequately summarise the curves in my data sets I followed the method outlined by MacLeod \citeyearpar{MacLeod2012}. For each data set I chose a random selection of pictures of specimens which represented the breadth of the morphological data (i.e. specimens from each sub-group of species). I drew the appropriate curves on each specimen and over-sampled the number of points on the curves. I measured the length of the line and regarded that as the 100\%, true length of that outline. I then re-sampled the curves with decreasing numbers of points and measured the length of the outlines. I calculated the length of each re-sampled curve as a percentage of the total length of the curve and then found the average percentage length for that reduced number of semilandmark points across all of the specimens in my test file. I continued this process until I found the minimum number of points that gave a curve length which was at least 95\% accurate.  I repeated these curve-sampling tests for each analysis to determine the minimum number of semilandmark points which would give accurate representations of morphological shape.
+	When combining landmark and semilandmark approaches, there is a potential problem of over-sampling the curves \citep{MacLeod2012}. To determine the number of semilandmark points required to adequately summarise the curves in my data sets I followed the method outlined by MacLeod \citeyearpar{MacLeod2012}. For each data set I chose a random selection of photos of specimens which represented the breadth of the morphological data (i.e. specimens from each sub-group of species). I drew the appropriate curves on each specimen and over-sampled the number of points on the curves. I measured the length of the line and regarded that as the 100\%, true length of that outline. I then re-sampled the curves with decreasing numbers of points and measured the length of the outlines. I calculated the length of each re-sampled curve as a percentage of the total length of the curve and then found the average percentage length for that reduced number of semilandmark points across all of the specimens in my test file. I continued this process until I found the minimum number of points that gave a curve length which was at least 95\% accurate.  I repeated these curve-sampling tests for each analysis to determine the minimum number of semilandmark points which would give accurate representations of morphological shape.
 	
-	Here I summarise the landmarks and curves which I used on each of my different sets of pictures. For landmarks which are defined by dental structures, I used published dental sources \citep{Repenning1967, Eisenberg1969, Nowak1983, MacPhee1987, KnoxJones1992, Davis1997, Querouil2001, Nagorsen2002, Wilson2005, Goodman2006, Karatas2007, Hoffmann2008, Asher2008, Lin2010,  Muldoon2009} where available to identify the number and type of teeth in each species.
+	Here I summarise the landmarks and curves which I used on each of my different sets of photos. For landmarks which are defined by dental structures, I used published dental sources \citep{Repenning1967, Eisenberg1969, Nowak1983, MacPhee1987, KnoxJones1992, Davis1997, Querouil2001, Nagorsen2002, Wilson2005, Goodman2006, Karatas2007, Hoffmann2008, Asher2008, Lin2010,  Muldoon2009} where available to identify the number and type of teeth in each species.
 	
 %------------------------------------------------------------------
 \subsection{\normalfont{Skulls: dorsal view}}
-	Most of my landmarks in this view are relative (type 3) points which represent overall morphological shape but not necessarily homologous biological features \citep{Zelditch2012}. I placed ten landmarks and drew four semilandmark curves to represent the shape of both the braincase (posterior) and nasal (anterior) area of the skulls (figure \ref{fig:skdors_skvent}). Table \ref{tab:skdors} describes how I placed the landmarks and drew the outline curves for my dorsal skull pictures 
+	Most of my landmarks in this view are relative (type 3) points which represent overall morphological shape but not necessarily homologous biological features \citep{Zelditch2012}. I placed ten landmarks and drew four semilandmark curves to represent the shape of both the braincase (posterior) and nasal (anterior) area of the skulls (figure \ref{fig:skdors_skvent}). Table \ref{tab:skdors} describes how I placed the landmarks and drew the outline curves for my images of skulls in dorsal view.
 
 \subsection{\normalfont{Skulls: ventral view}}
 
-	Most of the landmarks in this view are concentrated around the dentition and palate of the animals. I placed 13 landmarks and drew one outline curve (resampled to 60 semilandmark points) around the back of the skull between landmarks 12 and 13 (figure \ref{fig:skdors_skvent}). The high variability of my species' basi-cranial region and difficulties associated with identifying developmentally or functionally homologous points precluded designation of additional landmarks towards the back of the skulls. Table \ref{tab:skvent} outlines the descriptions of the landmarks I placed on the ventral pictures.
+	Most of the landmarks in this view are concentrated around the dentition and palate of the animals. I placed 13 landmarks and drew one outline curve (resampled to 60 semilandmark points) around the back of the skull between landmarks 12 and 13 (figure \ref{fig:skdors_skvent}). The high variability of my species' basi-cranial region and difficulties associated with identifying developmentally or functionally homologous points precluded designation of additional landmarks towards the back of the skulls. Table \ref{tab:skvent} outlines the descriptions of the landmarks I placed on the ventral skull photos.
 
 %------------------------------------------------
 %Skulls dorsal and ventral
@@ -144,7 +131,6 @@
 
 
 %Skdors descriptions
-
 \begin{table}[h]
 	\caption[Skulls: dorsal landmarks]
 		{Descriptions of the landmarks (points) and curves (semilandmarks) for the skulls in dorsal view (figure
@@ -161,21 +147,18 @@
 \label{tab:skvent}
 \end{table}
 %-------------------------------------------------------------
-\newpage
+
 \subsection{\normalfont{Skulls: lateral view}}
-	I placed nine landmarks on the lateral pictures (figure \ref{fig:sklat_mands}) and also drew two semilandmark curves between landmarks 7 and 8 to represent the shape of the back of the skull (resampled to 20 semilandmark points) and landmarks 8 and 1 (resampled to 15 semilandmark points) down the midline of the nose to represent the shape of the top of the skull. Table \ref{tab:sklat} describes my definitions for each of the landmark points.
-	If specimens were damaged on their right side I reflected photographs of the left lateral side of the skull so that all pictures would be in the same orientation.
-	%SF: Took out the section on infraorbital foramen landmarks
+	I placed nine landmarks on the photographs of skulls in lateral view (figure \ref{fig:sklat_mands}) and also drew two semilandmark curves to represent the shape of the back of the skull (between landmarks 7 and 8, resampled to 20 semilandmark points) and the top of the skull (between landmarks 8 and 1, resampled to 15 semilandmark points). Table \ref{tab:sklat} describes my definitions for each of the landmark points.
+	If specimens were damaged on their right side I reflected photographs of the left lateral side of the skull so that all the images were in the same orientation.
+
 
 \subsection{\normalfont{Mandibles}}
-	I placed seven landmarks and drew four curves on each mandible picture (again, reflecting any pictures of the left mandible so they could be compared to pictures of the right side, figure \ref{fig:sklat_mands}). I drew separate curves around each of the three processes of the ascending ramus: coronoid, condyloid and angular and along the base of the horizontal ramus of the jaw. 
-	
+	I placed seven landmarks and drew four curves on each mandible photograph (again, reflecting any images of the left mandible so they were in the correct orientation, figure \ref{fig:sklat_mands}). I drew separate curves around each of the three processes of the ascending ramus: coronoid, condyloid and angular and along the base of the horizontal ramus of the jaw (figure \ref{fig:sklat_mands}, table \ref{tab:mands}). 	
 %SF: Took out the paragraph about developmental independence in the jaw
 
 %---------------------------------------------------
 %Combined sklat and mandibles diagrams
-
-
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=1\linewidth]{Methods/figures/Sklat+mands_combined_BW.png}
@@ -185,7 +168,6 @@
 \end{figure}
 
 %Sklat descriptions
-
 \begin{table}[!htb]
 \caption[Skulls: lateral landmarks]
 		{Descriptions of the landmarks (points) and curves (semilandmarks) for the skulls in lateral view (figure \ref{fig:sklat_mands}).} 
@@ -193,6 +175,7 @@
 \label{tab:sklat}
 \end{table}
 
+%Mandibles descriptions
 \begin{table}[!htb]			
 	\centering
 	\caption[Mandibles: landmarks]
@@ -200,80 +183,38 @@
 	\input{Methods/tables/mandibles.landmarks}
 	\label{tab:mands} 
 \end{table}
-
-
-
-
-%-----------------------------------------------
-%Stopped here 21/10/2014
 %------------------------------------
 
 
+\newpage
 \subsection{\normalfont{Procrustes superimposition}}
 \label{sect:procrustes}
 
-	After creating my files with the landmarks and semilandmarks placed on each picture, I used TPSUtil \citep{Rohlf2012} to create "sliders" files that defined which points in the TPS files should be treated as semilandmarks \citep{Zelditch2012}. I conducted all further morphometric analyses in R version 3.0.2 \citep{Team2014} within the geomorph package \citep{Adams2013}.
-	
-	% NC: Not needed - of course you'd do it for every picture. And you can discuss the extra uses of the data in the discussion
-	%I placed landmarks and semilandmarks on all the pictures from every specimen. However, for the purposes of comparing morphological diversity in tenrecs to their closest relatives (chapter \ref{chap:disparity} I only used the tenrec and golden mole subset of the data. However, the TPS files containing landmark coordinates for all remaining species could be used for future analyses of morphological convergence (see discussion in chapter \ref{chap:discussion}). 
+	After creating my files with the landmarks and semilandmarks placed on each photograph, I used TPSUtil \citep{Rohlf2012} to create "sliders" files that defined which points in the TPS files should be treated as semilandmarks \citep{Zelditch2012}. I conducted all further morphometric analyses in R version 3.0.2 \citep{Team2014} within the geomorph package \citep{Adams2013}.
+
 	
 	I used the gpagen function in the geomorph package \citep{Adams2013} to run a general Procrustes alignment \citep{Rohlf1993} of the landmark coordinates while sliding the semilandmarks by minimising Procrustes distance \citep{Bookstein1997}.
 	I used these Procrustes-aligned coordinates of all specimens to calculate average shape values for each species which I then used for a principal components (PC) analysis with the plotTangentSpace function \citep{Adams2013}. 
 	
 
-%####################################################
-
-%I'm not sure whether this is the most appropriate way to deal with errors: I could split up the sections and put them at the end of each of the previous sections rather than breaking up the story here but that might be more fragmented overall
-
-% NC: I think this can probably be reintegrated mostly with the rest of the section. Only 5 is really relevant. So maybe just have a section on "Potential morphometrics errors" rather than error checking? Or add as a subsection to the 2D data collection?
-
-\section{Error checking}
-\label{sect:errors}
-	My data are prone to a number of different sources of error. These include 1) taxonomic identification which has not been updated to currently accepted names, 2) specimen identification errors, 3) possible variation associated with sex and age class of individuals, 4) the accuracy and repeatability with which species traits are measured, 5) morphometric errors associated with photographing specimens and the placement of landmarks. I address each of these possible sources of error below.  
-
-\subsection{\normalfont{Taxonomic}}
-	I recorded species names as they were written on museum specimen labels and then corrected them to match the taxonomy in Wilson and Reeder's Mammal Species of the World \citeyearpar{Wilson2005}. For recently identified species, such as \textit{Microgale jobihely} \citep{Goodman2006}, which are not included in Wilson and Reeder \citeyearpar{Wilson2005}, I used the taxonomy recorded on the labels. 
-	% NC: Haven't you already said this in data collection above? Maybe just pop it in the relevant place?
-
-\subsection{\normalfont{Specimen identification}}
-	%add in Natalie's centroid means?
-	% NC: So this is only an issue for these four? If so maybe pop into supp material as you don't use them
-	
-	There were four specimens from the Smithsonian Institute that had species labels which did not match between skulls and skins with the same specimen ID numbers. The four skulls were labeled as \textit{Hemicentetes semispinosus}. The corresponding skins were originally labeled as \textit{H. semispinosus} but this was crossed out and changed to \textit{H. nigriceps}. The re-labeled skins looked clearly different to the undisputed \textit{H. semispinosus} skins and also look more similar to other pictures of \textit{H. nigriceps}. Therefore, I made the assumption that the re-labeling of the skins as \textit{H. nigriceps} represents the true taxonomy and I treated the corresponding skulls as \textit{H. nigriceps}.
-
-\subsection{\normalfont{Specimen sex and age}}
-% NC: could just mention this when talking about how you selected specimens to measure since you don't actually quantify or fix the error.
-
-	Age classification of mammal skulls is usually based on dental characteristics and cranial fusion.
- 	However, it is difficult to age-classify tenrecs in this way. In some species the last molar does not erupt fully until the first molar has been shed so the full dentition is never present at any one time \citep{Nowak1983}. Furthermore, it is difficult to distinguish deciduous from permanent teeth in \textit{Microgale} tenrecs \citep{Asher2008} which has led to confusion and misidentification of juvenile forms as separate species \citep{Olson2004}.
- 	I identified and excluded any obviously juvenile specimens based on incomplete cranial fusion. When specimens could not be obviously identified as juveniles I treated them all as equivalent adult forms. 	
-	I included both male and female specimens in my data as I am interested in cranial shape of the species as a whole regardless of whether or not there are differences due to sexual size dimorphism.
-
-
-
-
+%------------------------------------------------
 \subsection{\normalfont{Potential morphometrics errors}}
-
-    % NC: Not relevant
-	%I used 2D morphometrics to compare the morphologies of the skulls (section \ref{sect:morphometrics}). The small size of my specimens, combined with the number of specimens involved in my study made 3D imaging impractical. It takes roughly 1.5 hours for a good quality scan of each specimen so it would have taken me at least 550 hours to scan the 366 specimens that I photographed.
 	 
 	While 2D methods are an accepted means of comparing morphological shape \citep[e.g.][]{Adams2004, Mitteroecker2009}, particularly for comparing skull morphologies of small mammals \citep[e.g.][]{Cardini2003, Panchetti2008, White2008, Barrow2008, Scalici2011}, the inherent discrepancies associated with comparing three dimensional objects using two dimensional pictures can introduce some potential problems of possible image distortion \citep{Arnqvist1998}. Similarly, human error with how landmarks are positioned on specimens could also introduce noise into further analyses. 
 	
 	In contrast to detailed intraspecific work \citep[e.g.][]{Bornholdt2008, Blagojevic2011} photographic or landmark placement errors are unlikely to be significant in my interspecific study since one would expect that the morphological variation among species is large enough to  be detected as a signal above any background noise associated with methodological error \citep{Arnqvist1998}. Nevertheless, it is still important to assess measurement error in a morphometric data set to increase confidence in the outcome of final analyses.
-	I identify two main sources of morphometric measurement error; specimen orientation and placement of landmarks.
+	I identified two possible sources of morphometric measurement error; specimen orientation and placement of landmarks.
 
 	Variation in the orientation of specimens for photography is one of the main sources of error in 2D morphometric studies \citep{Adriaens2007}. If specimens are not placed on a flat plane or in a consistent position relative to the camera, areas of the object which are tilted towards the camera will appear to be larger than reality, distorting any subsequent morphometric analyses of the shape. 
 	I placed the landmarks on each set of pictures so inter-observer variation in landmark placement is not an issue for my study.  However, repeatability and reliability of my choice of landmarks could affect the final results of my analyses \citep{Arnqvist1998}.
 	%Need to fix this reference: it's okay in the bibliography but it doesn't all show up here
 
-	To measure potential orientation error, I photographed the skulls (dorsal, ventral and lateral views) and mandibles of each specimen three times, cycling through the pictures so that the specimen was removed and re-positioned before every shot \citep{Viscosi2011}.
-	I used a subset of my ventral skull pictures to test for two sources of error: specimen orientation and landmark placement error \citep{Arnqvist1998, Barrow2008}. Of the specimens which I photographed three times,  I chose a random subset of seven skulls from four different Families: three tenrecs and single representatives of shrews, moles, hedgehogs and golden moles. I copied these images and placed landmarks on three copies of each image to compare variation in landmark placement within each orientation (three copies of the one image). This gave nine replicates of each skull: three separate pictures, and three copies of each of those pictures. As before, I ran a general Procrustes alignment \citep{Rohlf1993} of the specimens, calculated the average shape values for each skull (average of all nine pictures) and used these values for a principal components (PC) analysis. 
+	To measure potential orientation error, I photographed the skulls (dorsal, ventral and lateral views) and mandibles of each specimen three times, cycling through the photos so that the specimen was removed and re-positioned before every shot \citep{Viscosi2011}.
+	I used a subset of my ventral skull images to test for two sources of error: specimen orientation and landmark placement error \citep{Arnqvist1998, Barrow2008}. Of the specimens which I photographed three times,  I chose a random subset of seven skulls from four different Families: three tenrecs and single representatives of shrews, moles, hedgehogs and golden moles. I copied these images and placed landmarks on three copies of each image to compare variation in landmark placement within each orientation. This gave nine replicates of each skull: three separate photos, and three copies of each of those photos. As before, I ran a general Procrustes alignment \citep{Rohlf1993} of the specimens, calculated the average shape values for each skull (average of all nine pictures) and used these values for a principal components (PC) analysis. 
 		
-	I used a linear mixed effects model to model the shape variation (first PC axis) associated with specimen (fixed effect) and two nested random effects: picture identity nested within specimen and picture replicate nested within picture. I ran the test using the lmer function in the lme4 package \citep{Bates2014}. % NC: Need to explain more clearly what you mean here. Why the nesting? What would a sig result show you?
+	I used a linear mixed effects model to model the shape variation (first PC axis) associated with specimen (fixed effect) and two nested random effects: photo identity nested within specimen and image replicate nested within each photograph. This nested approach was necessary to deal with the hierarchical nature of my data subset: three photos of every specimen and three replicates of each of those images. I ran the test using the lmer function in the lme4 package \citep{Bates2014}.  
 
-	Specimen orientation and landmark placement had negligible effects on the overall shape variation between different skulls (2.76 x 10\textsuperscript{-16} $\pm$ 1.66 x 10\textsuperscript{-8} and 7.4 x 10\textsuperscript{-14} $\pm$ 2.72 x 10\textsuperscript{-7} respectively). % NC: What are these numbers? Estimates? Effect sizes?
-	
-	Therefore, I am confident that shape variation between the specimens in the rest of my analyses reflected true morphological differences rather than methodological error.
+	I found that specimen orientation and landmark placement have negligible effects on the overall shape variation between different skulls: the random effect variables of photo identify and image replicate explained less than 0.0001 \% of the overall shape variation among different skulls. Therefore, I am confident that shape variation between the specimens in the rest of my analyses reflected true morphological differences rather than methodological error.
 
 
 
