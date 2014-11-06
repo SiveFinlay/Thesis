@@ -7,7 +7,10 @@
   #Overall result for skulls: no significant difference for the full data
     #Tenrecs>golden moles in the reduced analysis with the Microgale subsample
     
-    #Leaving out the mandibles because they have G>T for all data and no significant difference with the subsample data set
+    #Leaving out the mandibles for the paper because they have G>T for all data and no significant difference 
+    #with the subsample data set
+    
+    #04/11/14: Added the mandibles back in so that I can put them into my thesis chapter
 
 #steps:
   #1) Read in a clean up raw landmark data
@@ -53,14 +56,24 @@ setwd("C:/Users/sfinlay/Desktop/Thesis/Disparity/data/")
 #--------------------------------------------------------
 #SkLat
   #1) Landmarks
-    land <- readland.tps(file="sklat/SkLat_08_11_13_9landmarks_2curves_edited.TPS")
+    #land <- readland.tps(file="sklat/SkLat_08_11_13_9landmarks_2curves_edited.TPS")
   #2) Sliders
-    curves <- as.matrix(read.table(file="sklat/SkLat_08_11_13_9landmarks_2curves_sliders_edited.NTS", header=TRUE))
+    #curves <- as.matrix(read.table(file="sklat/SkLat_08_11_13_9landmarks_2curves_sliders_edited.NTS", header=TRUE))
   #3) Taxonomy
-    taxa <- read.csv("sklat/SkLat_08_11_13_Specimens+images.csv", header=TRUE)
+    #taxa <- read.csv("sklat/SkLat_08_11_13_Specimens+images.csv", header=TRUE)
   #4) Specimens to remove
-    rem <- read.csv("sklat/SkLat_remove_spec.csv", header=T)
+    #rem <- read.csv("sklat/SkLat_remove_spec.csv", header=T)
+#----------------------------------------------------------
+#Mandibles 
 
+#1) Landmarks
+  land <- readland.tps(file="mands/Mands_14_03_2014_7landmarks+4curves_edited.TPS")
+#2) Sliders
+  curves <- as.matrix(read.table("mands/Mands_14_03_2014_7landmarks+4curves_sliders_edited.txt", header=TRUE))
+#3) Taxonomy
+  taxa <- read.csv("mands/Mands_14_03_2014_Images+Specimens.csv", header=T)
+#4) Specimens to remove
+  rem <- read.csv("mands/Mands_remove_spec.csv", header=T)
 
 
 #################################################
@@ -102,7 +115,7 @@ setwd("C:/Users/sfinlay/Desktop/Thesis/Disparity/data/")
 #I originally removed all of the Microgale but it makes more sense to keep at least some of them
 
 #Find all of the rows that are Microgale specimens
-  # mic <- which(mydata$Genus=="Microgale")
+   #mic <- which(mydata$Genus=="Microgale")
 #Find how many different Microgale species there are
   #mic.data <- select.from.list(mydata, mic)
   #mic.data <- droplevels.from.list(mic.data)
@@ -119,7 +132,7 @@ setwd("C:/Users/sfinlay/Desktop/Thesis/Disparity/data/")
   #List of Microgale species which are not the selected ones
    #mic.spec.rem <- droplevels((remove.from.list(mic.data, sel.mic.id))$Binom)
 
-  #Remove these Microgale (12 species that are not the 5 selected ones)
+  #Remove these Microgale (14 species that are not the 5 selected ones)
 
   #Find the ID numbers of those species within the main data set
   #mic.rem.id <- NULL
@@ -176,7 +189,8 @@ sps.meanPCA <- plotTangentSpace(sps.mean$meanshape, axis1 = 1, axis2 = 2,warpgri
   sp.fam <- as.data.frame(unique(cbind(as.matrix(Proc.co$Fam), as.matrix(Proc.co$Binom))))
     colnames(sp.fam) <- c("Family","Binomial")
 
-#I haven't made a pretty PCA graph from this script yet
+#I haven't made a pretty PCA graph from this script yet: I used the separate 
+#twofamily_disparity_PCAplots script to plot all 4 PCA graphs together
 
 #######################################
 #SELECT PC AXES

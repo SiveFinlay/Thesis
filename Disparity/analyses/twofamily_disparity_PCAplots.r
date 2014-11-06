@@ -1,7 +1,8 @@
-#25/07/2014
+#04/11/2014
   #Script to make a 4-panel PCA plot of each data set for my paper
+    #Updated to have the families idenfied as different symbols instead of different colours
   
-  #Analysis code is exactly the same as the twofamily_disparity script except that the
+  #Analysis code is exactly the same as the diversity_twofamily_cent_dist script except that the
   #data objects are re-named so I can have all four data sets within the one R session to plot the graphs together
 
 #-----------------------------------------------------------------------------------
@@ -10,9 +11,8 @@ library(geomorph)
 library(vegan)
 library(boot)
 
-source("C:/Users/sfinlay/Desktop/Thesis/Disparity/functions/Disparity_general_functions.r")
-source("C:/Users/sfinlay/Desktop/Thesis/Disparity/functions/DisparityFunctions_Variance_Range.r")
-source("C:/Users/sfinlay/Desktop/Thesis/Disparity/functions/PvalueFunction_FromDistribution.r")
+source("C:/Users/sfinlay/Desktop/Thesis/Disparity/functions/Morpho_diversity_functions.r")
+
 ########################################################
 #READ IN DATA; directory will change for each data set
   #Re-name the objects with skdors, skvent etc to distinguish between them
@@ -250,55 +250,65 @@ source("C:/Users/sfinlay/Desktop/Thesis/Disparity/functions/PvalueFunction_FromD
     colnames(mands.sp.fam) <- c("Family","Binomial")
 
 #--------------------------------------
-#PCA plots: default colour palette so Chrysochloridae are black and Tenrecidae are red
+#PCA plots: Families have different symbols instead of different colours
 
-par(mfrow=c(2,2))
+
+par(mar=c(5,5,4,4), mfrow=c(2,2))
 #SkDors
   plot(skdors.xaxis, skdors.yaxis, xlab="", ylab="", las=1,
-       col=skdors.sp.fam$Family, pch=16, bty="l", cex.lab=1, cex=1.2, xaxt="n", yaxt="n")
+       pch=c(16,17)[skdors.sp.fam$Family], bty="l", cex.lab=1.75, cex=1.5, xaxt="n", yaxt="n")
     #draw the min,max and 0 values on the x axis
-      axis(side=1, at=c(round(min(skdors.xaxis),3), 0, round(max(skdors.xaxis),3)), las=1, cex=1.5)
+      axis(side=1, at=c(round(min(skdors.xaxis),3), round(max(skdors.xaxis),3)), las=1, cex.axis=1.3)
+      axis(side=1, at=0, las=1, cex.axis=1.3) #put in the 0 separately so it doesn't have decimal places after it
     #same for the y axis
-      axis(side=2, at=c(round(min(skdors.yaxis),3), 0, round(max(skdors.yaxis),3)), las=1, cex=1.5)
+      axis(side=2, at=c(round(min(skdors.yaxis),3), round(max(skdors.yaxis),3)), las=1, cex.axis=1.3)
+      axis(side=2, at=0, las=1, cex.axis=1.3)
     #add dotted lines along 0,0
       abline(0,0, h=0, v=0, lty=2, lwd=1)
       
 #SkVent
   plot(skvent.xaxis, skvent.yaxis, xlab="", ylab="", las=1,
-       col=skvent.sp.fam$Family, pch=16, bty="l", cex.lab=1, cex=1.2, xaxt="n", yaxt="n")
+       pch=c(16,17)[skvent.sp.fam$Family], bty="l", cex.lab=1.75, cex=1.5, xaxt="n", yaxt="n")
     #draw the min,max and 0 values on the x axis
-      axis(side=1, at=c(round(min(skvent.xaxis),3), 0, round(max(skvent.xaxis),3)), las=1, cex=1.5)
+      axis(side=1, at=c(round(min(skvent.xaxis),3), round(max(skvent.xaxis),3)), las=1, cex.axis=1.3)
+      axis(side=1, at=0, las=1, cex.axis=1.3) 
     #same for the y axis
-      axis(side=2, at=c(round(min(skvent.yaxis),3), 0, round(max(skvent.yaxis),3)), las=1, cex=1.5)
+      axis(side=2, at=c(round(min(skvent.yaxis),3), round(max(skvent.yaxis),3)), las=1, cex.axis=1.3)
+      axis(side=2, at=0, las=1, cex.axis=1.3)
     #add dotted lines along 0,0
       abline(0,0, h=0, v=0, lty=2, lwd=1)
 
 
 #SkLat
   plot(sklat.xaxis, sklat.yaxis, xlab="", ylab="", las=1,
-       col=sklat.sp.fam$Family, pch=16, bty="l", cex.lab=1, cex=1.2, xaxt="n", yaxt="n")
+       pch=c(16,17)[sklat.sp.fam$Family], bty="l", cex.lab=1.75, cex=1.5, xaxt="n", yaxt="n")
     #draw the min,max and 0 values on the x axis
-      axis(side=1, at=c(round(min(sklat.xaxis),3), 0, round(max(sklat.xaxis),3)), las=1, cex=1.5)
+      axis(side=1, at=c(round(min(sklat.xaxis),3), round(max(sklat.xaxis),3)), las=1, cex.axis=1.3)
+      axis(side=1, at=0, las=1, cex.axis=1.3) 
     #same for the y axis
-      axis(side=2, at=c(round(min(sklat.yaxis),3), 0, round(max(sklat.yaxis),3)), las=1, cex=1.5)
+      axis(side=2, at=c(round(min(sklat.yaxis),3), round(max(sklat.yaxis),3)), las=1, cex.axis=1.3)
+      axis(side=2, at=0, las=1, cex.axis=1.3)
     #add dotted lines along 0,0
       abline(0,0, h=0, v=0, lty=2, lwd=1)
       
 
 #Mands
   plot(mands.xaxis, mands.yaxis, xlab="", ylab="", las=1,
-       col=mands.sp.fam$Family, pch=16, bty="l", cex.lab=1, cex=1.2, xaxt="n", yaxt="n")
+       pch=c(16,17)[mands.sp.fam$Family], bty="l", cex.lab=1.75, cex=1.5, xaxt="n", yaxt="n")
     #draw the min,max and 0 values on the x axis
-      axis(side=1, at=c(round(min(mands.xaxis),3), 0, round(max(mands.xaxis),3)), las=1, cex=1.5)
+      axis(side=1, at=c(round(min(mands.xaxis),3), round(max(mands.xaxis),3)), las=1, cex.axis=1.3)
+      axis(side=1, at=0, las=1, cex.axis=1.3) 
     #same for the y axis
-      axis(side=2, at=c(round(min(mands.yaxis),3), 0, round(max(mands.yaxis),3)), las=1, cex=1.5)
+      axis(side=2, at=c(round(min(mands.yaxis),3), round(max(mands.yaxis),3)), las=1, cex.axis=1.3)
+      axis(side=2, at=0, las=1, cex.axis=1.3) 
     #add dotted lines along 0,0
       abline(0,0, h=0, v=0, lty=2, lwd=1)
+
 #identify points
-identify(mands.xaxis, mands.yaxis,labels=(mands.sp.fam$Binom))
+#identify(mands.xaxis, mands.yaxis,labels=(mands.sp.fam$Binom))
 
 #I copied and pasted the plots into a powerpoint presentation and added the labels to the axes
-  #Saved within output/shapedata
+  #Saved within Disparity/output/shapedata
 
 #--------------------------------------
 #Select PC axes for each analysis
