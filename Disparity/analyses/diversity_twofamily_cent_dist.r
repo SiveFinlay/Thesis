@@ -82,15 +82,14 @@ setwd("C:/Users/sfinlay/Desktop/Thesis/Disparity/data/")
 #1) Data
   # Reduced data file: all landmarks and just one curve at the base of the mandible
     land <- readland.tps(file="mands/Mands_14_03_2014_7landmarks+1bottomcurve_edited.TPS")
-  
 #2) Sliders
   # Reduced sliders file: just one curve at the base of the mandible
     curves <- as.matrix(read.table("mands/Mands_14_03_2014_7landmarks+1bottomcurve_sliders_edited.NTS", header=TRUE))
-
 #3) Taxonomy
   taxa <- read.csv("mands/Mands_14_03_2014_Images+Specimens.csv", header=T)
 #4) Specimens to remove
   rem <- read.csv("mands/Mands_remove_spec.csv", header=T)
+  
 #################################################
 #CLEAN UP THE DATA
 #################################################
