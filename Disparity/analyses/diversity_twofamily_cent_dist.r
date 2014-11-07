@@ -64,18 +64,33 @@ setwd("C:/Users/sfinlay/Desktop/Thesis/Disparity/data/")
   #4) Specimens to remove
     #rem <- read.csv("sklat/SkLat_remove_spec.csv", header=T)
 #----------------------------------------------------------
+#NB: Mandibles analyses are for the thesis only, not the paper
+#-------------------
+
 #Mandibles 
 
 #1) Landmarks
-  land <- readland.tps(file="mands/Mands_14_03_2014_7landmarks+4curves_edited.TPS")
+  #land <- readland.tps(file="mands/Mands_14_03_2014_7landmarks+4curves_edited.TPS")
 #2) Sliders
-  curves <- as.matrix(read.table("mands/Mands_14_03_2014_7landmarks+4curves_sliders_edited.txt", header=TRUE))
+  #curves <- as.matrix(read.table("mands/Mands_14_03_2014_7landmarks+4curves_sliders_edited.txt", header=TRUE))
+#3) Taxonomy
+  #taxa <- read.csv("mands/Mands_14_03_2014_Images+Specimens.csv", header=T)
+#4) Specimens to remove
+  #rem <- read.csv("mands/Mands_remove_spec.csv", header=T)
+#--------------------------------------
+#Reduced Mandibles: all landmarks but just one curve at the base of the jaw
+#1) Data
+  # Reduced data file: all landmarks and just one curve at the base of the mandible
+    land <- readland.tps(file="mands/Mands_14_03_2014_7landmarks+1bottomcurve_edited.TPS")
+  
+#2) Sliders
+  # Reduced sliders file: just one curve at the base of the mandible
+    curves <- as.matrix(read.table("mands/Mands_14_03_2014_7landmarks+1bottomcurve_sliders_edited.NTS", header=TRUE))
+
 #3) Taxonomy
   taxa <- read.csv("mands/Mands_14_03_2014_Images+Specimens.csv", header=T)
 #4) Specimens to remove
   rem <- read.csv("mands/Mands_remove_spec.csv", header=T)
-
-
 #################################################
 #CLEAN UP THE DATA
 #################################################
