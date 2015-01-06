@@ -22,8 +22,6 @@
 \setcounter{tocdepth}{4}
 \setcounter{secnumdepth}{4} %number of subsections that are allowed
  
-
-	
 	
 
 %% Symbols
@@ -54,9 +52,12 @@
 
 \maketitle %puts in your title
 
-\input{abstract} %inputs abstract.tex
+\input{declaration}
+\input{summary}
+\input{acknowledgements}
+
 \allcontents %tells it to make a table of contents with figure and table lists too
-\input{acknowledgements} %inputs acknowledgements.tex
+ 
 \cleardoublepage
 \mainbody
 
@@ -69,10 +70,10 @@
 %************************************************
 %NB: I need to fix this refstyle for software and website references
 %*********************************************
-\bibliographystyle{refstyle} 
-%I'll need to fix the style file
-%The jeb one that I used for the disparity paper didn't work
-%But the current one doesn't have journal names in brackets and doesn't include websites
+%\bibliographystyle{refstyle} 
+\bibliographystyle{sysbio} 
+
+%I changed to using the systematic biology style file because that lets me put in url links for website links and software references
 
 \bibliography{refs_thesis} %you may also call you bibliography something different. This is refs-thesis.bib
 

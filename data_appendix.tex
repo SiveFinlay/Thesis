@@ -23,13 +23,14 @@
 
 %---------------------------------------------
 % Mandible  measurements
+\begin{center}
 \begin{table}[!htbp]
 	\caption[Mandible measurements]
 			{Measurement abbreviations and descriptions for the mandibles, all taken from the labial (outer) side of the right jaw unless that side was broken or missing. All measurements were repeated three times.}
 	\input{Methods/tables/mands.measurements}
 	\label{tab:mands.measurements}
 \end{table}
-
+\end{center}
 \newpage
 %######################################
 %Long tables
@@ -38,10 +39,11 @@
 %Skull measurements
 	%The \hline placement gives an error message but it still works anyway
 	%The error comes from putting the caption in before \hline but if I put it in at the end then the caption is below the table
+\begin{center}
 
-\begin{longtable}{p{.20\textwidth}p{.20\textwidth}p{0.60\textwidth}}
-\caption[Skull measurements]
-			{Abbreviations and descriptions for the linear measurements of skulls. All measurements were repeated three times except for those marked with * which were measured five times.}
+\begin{longtable} {p{.20\textwidth}p{.20\textwidth}p{0.60\textwidth}}
+\caption[Skull measurements] {Abbreviations and descriptions for the linear measurements of skulls. All measurements were repeated three times except for those marked with * which were measured five times.}\\
+
 \hline
 \textbf{Abbreviation} & \textbf{Measurement} & \textbf{Description}\\
 \hline
@@ -79,12 +81,14 @@ SkH & Skull height & Perpendicular height from the highest point on the braincas
 \label{tab:sk.measurements}
 
 \end{longtable}
+\end{center}
 \newpage
 %-------------------------------------------
 %Limbs measurements
-\begin{longtable}{p{2.4cm}p{3.2cm}p{9.5cm}}
-\caption[Limb measurements]
-		{Abbreviations and descriptions for the linear measurements of limbs. All measurements were repeated three times except for those marked with * which were measured five times.} 
+\begin{center}
+\begin{longtable} {p{2.4cm}p{3.2cm}p{9.5cm}}
+\caption[Limb measurements] {Abbreviations and descriptions for the linear measurements of limbs. All measurements were repeated three times except for those marked with * which were measured five times.} \\
+
 \hline
 \textbf{Abbreviation} & \textbf{Measurement} & \textbf{Description}\\
 \hline
@@ -133,9 +137,8 @@ Finger & Finger length & Length of the longest finger bone (to the metatarsal jo
 \hline
 \label{tab:limb.measurements}
 \end{longtable}
-
+\end{center}
 %****************************
-
 \subsection{\normalfont{Error checking for linear measurements}}
 	
 	As mentioned above (section \ref{sect:measurements}), I took three replicate measurements of most of my variables and five replicates of other, smaller variables. 
