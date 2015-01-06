@@ -1,5 +1,5 @@
 
-%I need to fix the table size, add references to the error checking, add the number of non-tenrecs or golden mole skulls that I used, extra pictures available on request or put them onto figshare?
+%I need to fix the tables
 
 \chapter{Data appendix}
 \label{appendix}
@@ -14,9 +14,9 @@
 \section{Linear measurements}
 \label{sect:measurements}
 
-	My thesis focuses on geometric morphometric analyses of skull shape. However, I also collected extensive data based on linear measurements of mandibles, mandibles and limbs. 
+	My thesis focuses on geometric morphometric analyses of skull shape. However, I also collected extensive data based on linear measurements of mandibles, skulls and limbs. 
 	
-	I used a 15 mm digital calipers (Mitutoyo Absolute digimatic calipers) for all of the measurements. I took five measurements of each mandible (table \ref{tab:mands.measurements}), 15 of the skulls (table \ref{tab:sk.measurements}) and 19 measurements of limbs (table \ref{tab:limb.measurements}). My choice of  measurements was based on three main criteria; 1) their relevance to biological and ecological traits such as diet specialisation and locomotory adaptation; 2) their usefulness for assessing the overall shape and size of the specimen; and 3) the ease with which they could be repeated both within and among specimens from different species. 
+	I used a 15 mm digital calipers (Mitutoyo Absolute digimatic calipers) for all of the measurements. I took five measurements of each mandible (table \ref{tab:mands.measurements}), 15 of the skulls (table \ref{tab:sk.measurements}) and 19 measurements of limbs (table \ref{tab:limb.measurements}). My choice of  measurements was based on three main criteria: 1) their relevance to biological and ecological traits such as diet specialisation and locomotory adaptation, 2) their usefulness for assessing the overall shape and size of the specimen, and 3) the ease with which they could be repeated both within and among specimens from different species. 
 
 	I took each linear measurement three times, cycling through all of the measurements then repeating the cycle to avoid measuring the same variable twice in a row. Small measurements (<2 mm) are particularly prone to high error rates \citep{Cardini2008}. Therefore, I took five separate replicates of some of the measurements which were often less than 2 mm and consequently most prone to errors (marked with * in tables \ref{tab:sk.measurements} and \ref{tab:limb.measurements}). These included four of the skull measurements (PWa, IncisorH, IFD and IFcanal, table \ref{tab:mands.measurements}) and five of the limb measurements (FemD, TibD, HumD, UlnD, RadD, table \ref{tab:limb.measurements}). 
 	Five replicates should give a more reliable median value because even if there are one or two outlying measurements there should be at least three replicates which are in close agreement \citep{Cooper2009}.
@@ -30,45 +30,122 @@
 	\label{tab:mands.measurements}
 \end{table}
 
-%NB: I need to fix the table lengths to go over more than one page
-
-%I used the longtablepackage  to go over more than one page but I need to get \setcounter{LTchunksize}{10} working to change the number of rows that are involved
-
+\newpage
+%######################################
+%Long tables
+	%I couldn't get the long tables to work when they were being input as seperate files so I changed to copying the full tables into here
+%######################################
 %Skull measurements
-\begin{table}[!htbp]
-	%\caption[Skull measurements]
-			%{Measurement abbreviations and descriptions for the skulls. All measurements were repeated three times except for those marked with * which were measured five times.}% add to this caption
-	\input{Methods/tables/skulls.measurements}
-	%\label{tab:sk.measurements}
-\end{table}
+	%The \hline placement gives an error message but it still works anyway
+	%The error comes from putting the caption in before \hline but if I put it in at the end then the caption is below the table
 
+\begin{longtable}{p{.20\textwidth}p{.20\textwidth}p{0.60\textwidth}}
+\caption[Skull measurements]
+			{Abbreviations and descriptions for the linear measurements of skulls. All measurements were repeated three times except for those marked with * which were measured five times.}
+\hline
+\textbf{Abbreviation} & \textbf{Measurement} & \textbf{Description}\\
+\hline
+CB & Condylobasal length & Total skull length from the front of the premaxillary  bones to the rear of the occipital condyles, measured from below \\
+%-------------------------------------------
+PL & Palate length & Maximum length of the palate from the anterior of the pre-maxilla to the posterior of the hard palate\\
+%----------------------------------------------
+TR & Tooth row length & From the front of the alveolus of the first incisor to the rear of the alveolus of the last molar on the same side\\
+%----------------------------------------------
+PWa* & Palate width anterior & Width across the palate measured between the posterior, outer-most points of the alveoli of the first pair of teeth\\
+%I had to modify this measurement slightly for some species: when there was a row of anterior incisors which stretch across the front of the palate (e.g. Euroscaptor klossi SI_261090) then I measured PWa as the width across from back of the row of the incisors on either side (i.e. just in front of the canines) 
+%----------------------------------------
+maxPW & Maximum palate width & Measured at the widest point of the palate\\
+%--------------------------------------------
+IncisorH* & Incisor height & Maximum height of the first incisor on the right\\
+%----------------------------------------
+ZW & Zygomatic width & Maximum width between the zygomatic arches (measured within the arches from below the skull)\\
+%---------------------------------------
+MX & Maxilla width & Width between the maxillary bones, measured from above the skull. Species with zygomatic arches; width from the innermost connection between the anterior of the arch and the skull. No arches; width between the anterior skull constrictions.\\ 
+%---------------------------------------
+SQ & Squamosal width & Width between the squamosal bones, measured from above the skull. Species with zygomatic arches; width from the innermost connection between the posterior of the arch and the skull. No arches; width between the posterior skull constrictions \\
+%-------------------------
+OL & Orbit length & Longitudinal length of the orbit opening measured along the edge of the skull from the maxilla to the squamosal. \\
+%------------------------------
+IFD* & Interorbital foramen width & The maximum (vertical) diameter of the right interorbital foramen\\
+%-----------------------------------------------
+IFW & Interorbital foramen width & Maximum width across the skull between the two interorbital foramina, measured from above\\
+%-------------------------------
+IFcanal* & Interorbital foramen canal & Length of the right IF canal measured between the anterior and posterior openings from above\\
+%---------------------------------
+BW & Braincase width & Width across the braincase at the widest point of the skull\\
+%---------------------------------
+SkH & Skull height & Perpendicular height from the highest point on the braincase to the base of the skull\\
+\hline
+\label{tab:sk.measurements}
 
-
-
-
-% Limb measurements
-\begin{table}[!htbp]
-	\caption[Limb measurements]
-		{Measurement abbreviations and descriptions for the limbs. All measurements were repeated three times except for those marked with * which were measured five times.} % add to this caption
-	\input{Methods/tables/limbs.measurements}
-	\label{tab:limb.measurements}
-\end{table}
-
+\end{longtable}
+\newpage
+%-------------------------------------------
+%Limbs measurements
+\begin{longtable}{p{2.4cm}p{3.2cm}p{9.5cm}}
+\caption[Limb measurements]
+		{Abbreviations and descriptions for the linear measurements of limbs. All measurements were repeated three times except for those marked with * which were measured five times.} 
+\hline
+\textbf{Abbreviation} & \textbf{Measurement} & \textbf{Description}\\
+\hline
+Inn & Innominate length & Maximum longitudinal length of the pelvic bone measured in a straight line from the anterior tip to the posterior curve \\ 
+%-----------------------------------
+Obt & Obturator foramen & Maximum diameter of the opening in the pelvic bone \\
+%-----------------------------------
+FemL & Femur length & Length of the bone excluding the femoral head (i.e. length of the bone without the joint area)  \\
+%-----------------------------------
+FemD* & Femur diameter & Minimum width across the shaft of the bone \\
+%-----------------------------------
+TibL & Tibia length & Maximum longitudinal length of the tibia  \\
+%-----------------------------------
+TibU & Tibia unfused length & Length of the tibula which is not fused with the fibula \\
+%-----------------------------------
+TibD* & Tibia diameter & Minimum diameter across the shaft of the tibia bone \\
+%-----------------------------------
+Foot & Foot length & Maximum length of the entire foot (heel to longest toe) \\
+%-----------------------------------
+Toe & Toe length & Length of the longest toe bone (just the phalange bone up to the metatarsal joint) \\
+%-----------------------------------
+ScapL & Scapula length & Perpendicular length of the scapula from the curved end to the anterior point  \\
+%-----------------------------------
+ScapW & Scapula width & Maximum perpendicular width across the bone \\
+%--------------------------------
+HumL & Humerus length & Maximum length of the bone. In golden moles (L-shaped humerus): diagonal distance between the two ends of the bone  \\
+%-------------------------------
+HumLvert & Humerus length vertical & Only for golden moles with L-shaped humerus: length of the vertical (longer) side of the bone \\
+%-------------------------------
+HumLhori & Humerus length horizontal & Only for golden moles with L-shaped humerus: length of the horizontal (shorter) side of the bone \\
+%-----------------------------------
+HumD* & Humerus diameter & Minimum diameter across the shaft of the humerus \\
+%-----------------------------------
+UlnL & Ulna length & Length of the bone from the posterior tip to the wrist joint \\
+%-----------------------------------
+RadL & Radius length & Length of the bone from the posterior tip to the wrist \\
+%--------------------------------
+UlnD* & Ulna diameter & Minimum diameter across the ulna \\
+%-------------------------------
+RadD* & Radius diameter & Minimum diameter across the radius \\
+%----------------------------
+Hand & Hand length & Maximum length of the entire hand (wrist to longest finger) \\
+%------------------------
+Finger & Finger length & Length of the longest finger bone (to the metatarsal joint) \\
+%---------------------
+\hline
+\label{tab:limb.measurements}
+\end{longtable}
 
 %****************************
-\newpage
+
 \subsection{\normalfont{Error checking for linear measurements}}
 	
 	As mentioned above (section \ref{sect:measurements}), I took three replicate measurements of most of my variables and five replicates of other, smaller variables. 
 	Some morphometric studies take replicate measurements of a trait and use the average value for further analyses. Rather than taking the mean of each of three (or five) measures, I used the median as it is less likely to be skewed by outliers and gives a more accurate representation of the true value of the trait.
 	
-	%Come back to here for references
-	
-	Before extracting the median values, I followed the protocol for assessing measurement error outlined by \citep{Cooper2009}. This method assesses whether there is a reasonable correlation among the replicate measurements of the same variable. The error checking criteria are based on two calculations; the coefficient of variation and the percentage spread.
+	Before extracting the median values, I followed the protocol for assessing measurement error outlined by \citep{Cooper2009}. This method assesses whether there is a reasonable correlation among the replicate measurements of the same variable. The error checking criteria are based on two calculations: the coefficient of variation and the percentage spread.
 	
 	I calculated the coefficient of variation (standard deviation/mean*100) for each measurement. This value estimates the extent to which replicate measurements deviate from the mean. When the coefficient of variation was less than 5\%, I accepted the median value as an accurate measurement of the size of the structure. 
 	If the coefficient of variation was greater than 5\%, indicative of a low agreement between replicate measurements, I measured the percentage spread of the data. For variables measured three times, I calculated percentage spread as [(minimum difference between neighbouring measurements)/ (range of measured values)*100].
-	For variables that I measured five times, the differences between neighbouring values were calculated and labelled from smallest to largest as a, b, c, and d with the range of the measured values designated as e \citep{Cooper2009}. For these variables, I calculated percentage spread as [(a/e + b/e + c/e)*100]. 
+	For variables that I measured five times, the differences between neighbouring values were calculated and labelled from smallest to largest as a, b, c, and d with the range of the measured values designated as e \citep[see][for a full explanation]{Cooper2009}. For these variables, I calculated percentage spread as [(a/e + b/e + c/e)*100]. 
 	Small percentage spread values indicate close agreement between repeated measurements. When percentage spread approaches 50\% the data are evenly spread out and therefore there is no way of knowing whether the median value is an accurate measurement of the trait \citep{Cooper2009}. I chose to use to use 25\% as a cut off point for accepting the accuracy of measured traits.
 
 	I used these error checking criteria to assess the accuracy of my repeated measurements of both skulls and limbs. 
@@ -76,17 +153,16 @@
 %--------------------------------------
 \section{Additional photographs}
 	\subsection{\normalfont{Skulls}}
-	Chapter \ref{chap:methods} describes my geometric morphometric analyses of tenrec and golden mole skulls. I used exactly the same photography set up and landmarks to analyse the photos of the non-Afrosoricida specimens (see table \ref{tab:species.measured} for reference). The TPS files containing landmark coordinates for this larger data set could be used  to measure morphological similarities among tenrecs and the species they convergently resemble. % Put in reference to discussion?
-	%Find how many additional skulls/ species they include
+	Chapter \ref{chap:methods} describes my geometric morphometric analyses of tenrec and golden mole skulls. I used exactly the same photography set up and landmarks to analyse the photos of the non-Afrosoricida specimens (see table \ref{tab:species.measured} for reference). The TPS files containing landmark coordinates for this larger data set could be used in future studies to measure morphological similarities among tenrecs and the species they convergently resemble (see section \ref{sect:concl}). These files include 174 additional specimens of 52 mammal species belonging to seven Families.
+	%Numbers come from the full skdors data set
 		
 	\subsection{\normalfont{Limbs}}
-	Initially, I tried to take pictures of the limbs in similar orientations to the skulls (dorsal, ventral and lateral). However, there was considerable variation in how the limbs were preserved. For example, some limbs were still articulated while others had fragmented bones. It therefore proved impossible to place the limb bones in consistent orientations that would be comparable across species. Similarly, the small size of some limbs, combined with the frequently incomplete nature of postcranial museum collections, made landmark-based morphometric analyses of any limb pictures impractical. Therefore, I photographed the fore- and hind-limb bones in outer (the side facing away from the rest of the body) and inner (the side facing in towards the centre of the body) views for reference purposes only.	
+	Initially, I tried to take photographs of the limbs in similar orientations to the skulls (dorsal, ventral and lateral). However, there was considerable variation in how the limbs were preserved. For example, some limbs were still articulated while others had fragmented bones. It therefore proved impossible to place the limb bones in consistent orientations that would be comparable across species. Similarly, the small size of some limbs, combined with the frequently incomplete nature of postcranial museum collections, made landmark-based morphometric analyses of any limb pictures impractical. Therefore, I photographed the fore- and hind-limb bones in outer (the side facing away from the rest of the body) and inner (the side facing in towards the centre of the body) views for reference purposes only.	
 	
 	\subsection{\normalfont{Skins}}
-	As I was limited by the maximum camera height available on the copy stands, most skins were too large to be photographed with the 100mm macro lens. Therefore, I used an EFS 18-55mm lens to take pictures of the skins. I photographed skins in the same three orientations as the skulls; dorsal (the upper surface of the animal), ventral (the belly side of the skin) and lateral (right flank of the animal with the skin held in position using bean bags). The dorsal and ventral views give very approximate estimates of the overall body shape of the animal. The lateral views are less biologically relevant since the taxidermic process is unlikely to produce specimens which represent the true body height of the animal. 
+	As I was limited by the maximum camera height available on the copy stands, most skins were too large to be photographed with the 100mm macro lens. Therefore, I used an EFS 18-55mm lens to take pictures of the skins. I photographed skins in the same three orientations as the skulls; dorsal (the upper surface of the animal), ventral (the belly side of the skin) and lateral (right flank of the animal with the skin held in position using bean bags). The dorsal and ventral views give very approximate estimates of the overall body shape of the animal. The lateral views are less biologically relevant since the taxidermic process is unlikely to produce specimens which represent the true body height of the animal. Museum copyright restrictions prohibit public sharing of the photographs but they are available on request.
 	There were four specimens from the Smithsonian Institute that had species labels which did not match between skulls and skins with the same specimen ID numbers. The four skulls were labeled as \textit{Hemicentetes semispinosus}. The corresponding skins were originally labeled as \textit{H. semispinosus} but this was crossed out and changed to \textit{H. nigriceps}. The re-labeled skins looked clearly different to the undisputed \textit{H. semispinosus} skins and also look more similar to other pictures of \textit{H. nigriceps}. Therefore, I made the assumption that the re-labeling of the skins as \textit{H. nigriceps} represents the true taxonomy and I treated the corresponding skulls as \textit{H. nigriceps}.
-	
-	%Images available on request or add them to figshare?
+
 
 %--------------------------------------------
 
