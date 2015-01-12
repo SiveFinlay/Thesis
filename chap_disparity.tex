@@ -52,12 +52,15 @@
 	\centering
 	\includegraphics [width=0.7\linewidth, height=0.7\textheight, keepaspectratio]{Disparity/writing/figures/Centroids.png}
 	\caption[Calculating diversity as mean Euclidean distance to Family centroid.]
-		{Estimating morphological diversity as the mean Euclidean distance between each species and the Family centroid. Every species has scores on the principal components (PC) axes that account for 95\% of the variation in the principal components analysis. The number of axes (PCn) varied for each analysis but they are the same within a single analysis. PC scores are used to calculate the Euclidean distance from each species to the Family centroid (average PC scores for the entire Family). Morphological diversity of the Family is the average value of these Euclidean distances.}
+		{Estimating morphological diversity as the mean Euclidean distance between each species and the Family centroid. Every species has scores on the principal components (PC) axes that account for 95\% of the variation in the principal components analysis. The number of axes (PCn) varied for each analysis but they are the same within a single analysis. PC scores are used to calculate the Euclidean distance from each species to the Family centroid (average (\begin{math}
+			\bar{x}
+			\end{math}) PC scores for the entire Family). Morphological diversity of the Family is the average value of these Euclidean distances.}
 	\label{fig:centroids}
 	\end{figure}
-% NC: To help with readability I'd move the text on the central family centroid to the left. I'd also add some sort of point (dot or cross) to the ends of the lines. Really the lines are distances so they may better as double headed arrows, or maybe with lines on the ends like error bars? Have a bit of a play around. But definitely move the central text as it's hard to read under the lines.	
+% SF: I moved the text and made the lines into double headed arrows, the error bar-type endings looked messy	
 
 %--------------------------------------
+
 	
 	One possible issue with these analyses is that the two Families have unequal sample sizes: 31 (or a subset of 17) tenrec species compared to just 12 golden mole species. Morphological diversity is usually decoupled from taxonomic diversity \citep[e.g.][]{Ruta2013, Hopkins2013} so larger groups are not necessarily more morphologically diverse. However, comparing morphological diversity in tenrecs to the diversity of a smaller Family could still bias the results. I used pairwise permutation tests to account for this potential issue as follows. 
 
@@ -69,13 +72,11 @@
 
 \section{Results}
 \label{sect:results}
-	%Edited these from the paper comments
-	%Change to using all four PCA plots
 
 	Figure \ref{fig:FourPCA} depicts the morphospaces defined by the first two principal component (PC) axes from my principal components analyses (PCAs) of skull and mandible morphologies. The PCAs are based on the average Procrustes-superimposed shape coordinates for skulls in three views (dorsal, ventral and lateral) and mandibles in lateral view.
 
 %-----------------------------
-% NC: I'd get rid of the silhouette legend at the side. They don't help with interpretation and make the figure feel unbalanced.
+% SF: I took away the silhouette legend
 	
 %PCA figure
 	%From the twofamily_disparity_PCAplots script
@@ -106,13 +107,13 @@
 %SF: Added the degrees of freedom to the t test results
 % NC: Don't put these in brackets, it looks weird. Also can you left align the p values and make them all the same number of figures i.e. either 0.110 and 0.014 OR 0.11 and 0.01. If the latter use < 0.01 for anything smaller. Same goes for SEs. And t values. 
 % NC: Also need a column heading above tenrecs and golden moles to say "morphological diversity"
+
+%SF I fixed the number of figures, removed brackets for df and added the extra column heading
 %------------------------------------
 
 	Secondly, I compared the morphological diversity within each Family. Based on my measures of mean Euclidean distance to the Family's centroid, tenrec skulls are more morphologically diverse than golden mole skulls when they are measured in lateral view but not in dorsal or ventral view (Table \ref{tab:diversity}). In contrast, when I analysed morphological diversity of skulls within the sub-sample of 17 tenrecs (including just five \textit{Microgale} species) compared to the 12 golden mole species, I found that tenrec skulls were significantly more morphologically diverse than golden moles in all analyses (Table \ref{tab:diversity}).
 		
-	The results of my analyses of the mandibles were different to those for the skulls. In the full analysis (31 species of tenrec compared to 12 species of golden mole), I found that golden moles have significantly more diverse mandible shapes than tenrecs but this difference was not significant when I used just 17 tenrec species (Table \ref{tab:diversity}). 
-	%Moved this paragraph up from the discussion
-	I recognised that my landmarks and curves for the mandibles focus particular attention on the ascending ramus (condyloid, condylar and angular processes, Figure \ref{fig:sklat_mands}). Therefore, I  deleted the three semilandmark curves around these structures and repeated my comparison of morphological diversity in the two Families. In this case, I found no significant differences in morphological diversity between the two Families (t-test, t\textsubscript{26.099}=1.709, p=0.099). Therefore, my results seem to indicate that golden moles have greater morphological variation in the posterior structures of their mandibles compared to tenrecs.
+	The results of my analyses of the mandibles were different to those for the skulls. In the full analysis (31 species of tenrec compared to 12 species of golden mole), I found that golden moles have significantly more diverse mandible shapes than tenrecs but this difference was not significant when I used just 17 tenrec species (Table \ref{tab:diversity}). I recognised that my landmarks and curves for the mandibles focus particular attention on the ascending ramus (condyloid, condylar and angular processes, Figure \ref{fig:sklat_mands}). Therefore, I  deleted the three semilandmark curves around these structures and repeated my comparison of morphological diversity in the two Families. In this case, I found no significant differences in morphological diversity between the two Families (t-test, t\textsubscript{26.099}=1.709, p=0.099). Therefore, my results seem to indicate that golden moles have greater morphological variation in the posterior structures of their mandibles compared to tenrecs.
 	
 	The pairwise permutation tests for each analysis confirmed that differences in morphological diversity were not artefacts of differences in sample size (Table \ref{tab:permutations}). I discuss my results further in Chapter \textbf{\ref{chap:discussion}}.
 
@@ -125,8 +126,9 @@
 	\label{tab:permutations}  
 \end{table}
 
-% NC: Get rid of the bold here since everything is significant!
-% NC: Also need a column heading above measured and permuted values to say "morphological diversity
+
+
+%SF: I got rid of the bold and added the extra column heading, I still need to fix the positioning
 %----------------------------------------------------
 % NC: The positioning of the tables is a bit weird. Perhaps play around with the float options once this is all ready so that you can try and get this looking a bit neater.
 	
