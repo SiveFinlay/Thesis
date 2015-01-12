@@ -6,8 +6,6 @@
 	In \textbf{Chapter \ref{chap:introduction}}, I explained why it is important to study patterns of morphological diversity in tenrecs. In this chapter, I present the first quantitative investigation of morphological diversity in tenrecs. I use geometric morphometric techniques \citep{Rohlf1993} to compare cranial morphological diversity in tenrecs to that of their closest relatives, the golden moles. 
 	I expect tenrecs to be more morphologically diverse than golden moles because tenrecs occupy a wider variety of ecological niches. The tenrec Family includes terrestrial, semi-fossorial, semi-aquatic and semi-arboreal species \citep{Soarimalala2011}. In contrast, all golden moles occupy very similar, fossorial ecological niches \citep{Bronner1995}. 
 	Greater ecological variety is often (though not always) correlated with higher morphological diversity \citep{Losos2010a}. In this chapter I test whether this prediction is supported when I compare morphological diversity in tenrecs to golden moles.
-%SF: I expanded the explanation of my prediction
-
 
 %------------------------------------------------------
 \section{Methods}
@@ -29,16 +27,19 @@
 		\end{figure}
 %----------------------------------------------------	
 
-	In Chapter \ref{chap:methods} (Figure \ref{fig:flow}), I described how I photographed skulls and summarised their morphologies using landmark morphometrics. I used photographs of 182 skulls in dorsal view (148 tenrecs and 34 golden moles), 173 skulls in ventral view (141 tenrecs and 32 golden moles), 171 skulls in lateral view (140 tenrecs and 31 golden moles) and 181 mandibles in lateral view (147 tenrecs and 34 golden moles). These samples represent 31 species of tenrec (out of the total 34 in the Family \citep{Olson2013}) and 12 species of golden moles (out of a total of 21 species in the Family, \citep{Asher2010}). Note that the number of skulls I used varies slightly for each analysis because some skulls were damaged in certain views.
+	In Chapter \ref{chap:methods} (Figure \ref{fig:flow}), I described how I photographed skulls and summarised their morphologies using landmark morphometrics. I used photographs of 182 skulls in dorsal view (148 tenrecs and 34 golden moles), 173 skulls in ventral view (141 tenrecs and 32 golden moles), 171 skulls in lateral view (140 tenrecs and 31 golden moles) and 181 mandibles in lateral view (147 tenrecs and 34 golden moles). These samples represent 31 species of tenrec (out of the total 34 in the Family; \citealp{Olson2013}) and 12 species of golden moles (out of a total of 21 species in the Family; \citealp{Asher2010}). Note that the number of skulls I used varies slightly for each analysis because some skulls were damaged in certain views.
 	
 
-	After placing the landmarks and creating sliders files within the TPS software series (section \ref{sect:morphometrics}, Figure \ref{fig:flow}), I combined the files into a single morphometrics data object and carried out all further analyses in R \citep{Team2014}. At this stage, I either used the full data set (31 species of tenrec and 12 species of golden mole) or a reduced data set with just 17 species of tenrec. I created this reduced data set because the majority of tenrec species (19 out of 31 in my data) belong to the \textit{Microgale} (shrew-like) Genus that has relatively low morphological diversity \citep{Soarimalala2011, Jenkins2003}. This may mask signals of higher morphological diversity among other tenrecs. To test this, I created a subset of the tenrec data that included just five of the \textit{Microgale} species, each representing one of the five sub-divisions of \textit{Microgale} outlined by Soarimalala and Goodman \citeyearpar{Soarimalala2011}, i.e. small, small-medium, medium, large and long-tailed species. I compared the morphological diversity of this subset of tenrecs (n=17: five \textit{Microgale} and 12 non \textit{Microgale} species) to that of the 12 species of golden moles (dashed arrows in Figure \ref{fig:flow}). After this selection stage, all further steps in the analyses were the same.
+	After placing the landmarks and creating sliders files within the TPS software series ( 
+	% NC: Might be worth specifying in front of each of these that you mean Chapter 2, section 2.x.x, or just Chapter 2.x.x. 
+	section \ref{sect:morphometrics}, Figure \ref{fig:flow}), I combined the files into a single morphometrics data object and carried out all further analyses in R % NC: which version?
+	\citep{Team2014}. At this stage, I either used the full data set (31 species of tenrec and 12 species of golden mole) or a reduced data set with just 17 species of tenrec. I created this reduced data set because the majority of tenrec species (19 out of 31 in my data) belong to the \textit{Microgale} (shrew-like) Genus that has relatively low morphological diversity \citep{Soarimalala2011, Jenkins2003}. This may mask signals of higher morphological diversity among other tenrecs. To test this, I created a subset of the tenrec data that included just five of the \textit{Microgale} species, each representing one of the five sub-divisions of \textit{Microgale} outlined by Soarimalala and Goodman \citeyearpar{Soarimalala2011}, i.e. small, small-medium, medium, large and long-tailed species. I compared the morphological diversity of this subset of tenrecs (n=17: five \textit{Microgale} and 12 non \textit{Microgale} species) to that of the 12 species of golden moles (dashed arrows in Figure \ref{fig:flow}). After this selection stage, all further steps in the analyses were the same.
 		
 	For each analysis, I did a general Procrustes alignment of the shape data and calculated the mean shape coordinates for every species (see section \ref{sect:procrustes}). I used these average, Procrustes-superimposed shape coordinates for a principal components analysis (PCA) and then selected the number of principal component (PC) axes that accounted for 95\% of the variation in the data (Figure \ref{fig:flow}).
 	
 \subsection{\normalfont{Estimating morphological diversity}}
 	
-	I grouped the PC scores for tenrecs and golden moles separately so that I could estimate the diversity of each Family and then compare the two groups (Figure \ref{fig:flow}). I compared morphological diversity in two ways. First, I used non parametric multivariate analysis of variance \citep[npMANOVA,][]{Anderson2001} to test whether tenrecs and golden moles occupied significantly different positions within the morphospaces defined by the PC axes that accounted for 95\% of the overall variation in the data \citep[e.g.][]{Serb2011, Ruta2013}. A significant difference between the two Families would indicate that they have unique morphologies which do not overlap. Second, I compared morphological diversity within tenrecs to the diversity within golden moles. I define morphological diversity as the mean Euclidean distance (sum of squared differences) between each species and its Family centroid (Figure \ref{fig:centroids}). This is summarised in the equation below where \textit{n} is the number of species in the Family, \textit{i} is the number of PC axes and \textit{c} are the average PC scores for each axis (the centroid). 
+	I grouped the PC scores for tenrecs and golden moles separately so that I could estimate the diversity of each Family and then compare the two groups (Figure \ref{fig:flow}). I compared morphological diversity in two ways. First, I used non parametric multivariate analysis of variance \citep[npMANOVA;][]{Anderson2001} to test whether tenrecs and golden moles occupied significantly different positions within the morphospaces defined by the PC axes that accounted for 95\% of the overall variation in the data \citep[e.g.][]{Serb2011, Ruta2013}. A significant difference between the two Families would indicate that they have unique morphologies which do not overlap. Second, I compared morphological diversity within tenrecs to the diversity within golden moles. I define morphological diversity as the mean Euclidean distance (sum of squared differences) between each species and its Family centroid (Figure \ref{fig:centroids}). This is summarised in the equation below where \textit{n} is the number of species in the Family, \textit{i} is the number of PC axes and \textit{c} are the average PC scores for each axis (the centroid). 
 	
 	\begin{equation}
 	Disparity = \frac{\sqrt{\Sigma(PCn_{i}-PCc_{i})^2}}{n}
@@ -54,18 +55,19 @@
 	\centering
 	\includegraphics [width=0.7\linewidth, height=0.7\textheight, keepaspectratio]{Disparity/writing/figures/Centroids.png}
 	\caption[Calculating diversity as mean Euclidean distance to Family centroid.]
-		{Estimating morphological diversity as the mean Euclidean distance between each species and the Family centroid. Every species has scores on the principal components (PC) axes that account for 95\% of the variation in the Principal Components Analysis. The number of axes (PCn) varied for each analysis but they are the same within a single analysis. PC scores are used to calculate the Euclidean distance from each species to the Family centroid (average PC scores for the entire Family). Morphological diversity of the Family is the average value of these Euclidean distances.}
+		{Estimating morphological diversity as the mean Euclidean distance between each species and the Family centroid. Every species has scores on the principal components (PC) axes that account for 95\% of the variation in the principal components analysis. The number of axes (PCn) varied for each analysis but they are the same within a single analysis. PC scores are used to calculate the Euclidean distance from each species to the Family centroid (average PC scores for the entire Family). Morphological diversity of the Family is the average value of these Euclidean distances.}
 	\label{fig:centroids}
 	\end{figure}
-	
+% NC: To help with readability I'd move the text on the central family centroid to the left. I'd also add some sort of point (dot or cross) to the ends of the lines. Really the lines are distances so they may better as double headed arrows, or maybe with lines on the ends like error bars? Have a bit of a play around. But definitely move the central text as it's hard to read under the lines.	
 
 %--------------------------------------
 	
-	One possible issue with these analyses is that the two Families have unequal sample sizes: 31 (or a subset of 17) tenrec species compared to just 12 golden mole species. Morphological diversity is usually decoupled from taxonomic diversity \citep[e.g.][]{Ruta2013, Hopkins2013} so larger groups are not necessarily more morphologically diverse. However, comparing morphological diversity in tenrecs to the diversity of a smaller Family could still bias the results. I used pairwise permutation tests to account for this potential issue. 
+	One possible issue with these analyses is that the two Families have unequal sample sizes: 31 (or a subset of 17) tenrec species compared to just 12 golden mole species. Morphological diversity is usually decoupled from taxonomic diversity \citep[e.g.][]{Ruta2013, Hopkins2013} so larger groups are not necessarily more morphologically diverse. However, comparing morphological diversity in tenrecs to the diversity of a smaller Family could still bias the results. I used pairwise permutation tests to account for this potential issue as follows. 
 
-	I tested the null hypothesis that tenrecs and golden moles have the same morphological diversity (the same mean Euclidean distance to the Family centroid). If this is true then the label identifying each specimen as a tenrec or golden mole is arbitrary. In this case, you could randomly assign the group identity of each species (i.e. shuffle the "tenrec" and "golden mole" labels) and then re-compare the morphological diversity of the two groups: there would still be no difference between them. I repeated this shuffling procedure (random assignation of group identity) 1000 times and calculated the difference in morphological diversity between the two groups for each permutation. This generated a distribution of 1000 values which are calculations of the differences in morphological diversity under the assumption that the null hypothesis (equal morphological diversity in the two Families) is true. This method automatically accounts for differences in sample size. Shuffling of the group labels preserves the sample size of each group: there will always be 12 species labelled as "golden mole" and then, depending on the analysis, either 31 or 17 species labelled as "tenrec". Therefore, the 1000 permuted values of differences in morphological diversity create a distribution of the expected difference in diversity between a group of sample size 31 (or 17 in the case of the subsetted tenrec data) compared to a group of sample size 12 under the null hypothesis that the two groups have the same morphological diversity. I compared the observed measures of the differences in morphological diversity between the two Families to these null distributions to determine whether there were significant differences after taking sample size into account (two tailed test).
-
-% NC: Much better. 
+	I tested the null hypothesis that tenrecs and golden moles have the same morphological diversity (the same mean Euclidean distance to the Family centroid). If this is true, when you randomly assign the group identity of each species (i.e. shuffle the "tenrec" and "golden mole" labels) and then re-compare the morphological diversity of the two groups, there will be no significant difference between these results and those obtained when the species are assigned to the correct groupings. 
+	% NC: I've rephrased this as really what is happening here is that there is no difference between the results you get with proper groupings versus random groupings. You expect that random groupings give no difference.
+	I performed this shuffling procedure (random assignation of group identity) 1000 times and calculated the difference in morphological diversity between the two groups for each permutation. This generated a distribution of 1000 values which are calculations of the differences in morphological diversity under the assumption that the null hypothesis (equal morphological diversity in the two Families) is true. This method automatically accounts for differences in sample size because shuffling of the group labels preserves the sample size of each group: there will always be 12 species labeled as "golden mole" and then, depending on the analysis, either 31 or 17 species labeled as "tenrec". Therefore, the 1000 permuted values of differences in morphological diversity create a distribution of the expected difference in diversity between a group of sample size 31 (or 17 in the case of the subsetted tenrec data) compared to a group of sample size 12 under the null hypothesis that the two groups have the same morphological diversity. I compared the observed measures of the differences in morphological diversity between the two Families to these null distributions to determine whether there were significant differences after taking sample size into account (two-tailed test % NC: What kind of test? t-test?
+	).
 	
 %----------------------------------------------------
 
@@ -77,25 +79,20 @@
 	Figure \ref{fig:FourPCA} depicts the morphospaces defined by the first two principal component (PC) axes from my principal components analyses (PCAs) of skull and mandible morphologies. The PCAs are based on the average Procrustes-superimposed shape coordinates for skulls in three views (dorsal, ventral and lateral) and mandibles in lateral view.
 
 %-----------------------------
-%New PCA figure: all four PCAs together, pictures as legend, bigger axis labels
-%I haven't put in the warp diagrams because they made it too crowded. I could add warps if I put in each PCA as a separate plot
-
-% NC: This looks good so maybe leave out the warps for now
+% NC: I'd get rid of the silhouette legend at the side. They don't help with interpretation and make the figure feel unbalanced.
 	
 %PCA figure
 	%From the twofamily_disparity_PCAplots script
 	\begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=1\linewidth, height=1\textheight, keepaspectratio]{Disparity/writing/figures/FourPCA_shapes.png}
-	\caption[Morphospace (principal components) plot of morphological diversity in lateral views of tenrec and golden mole skulls.]
-		{Principal components plots of the morphospaces occupied by tenrecs (triangles, n=31 species) and golden moles (circles, n=12 species) for the skulls (dorsal, ventral and lateral views) and mandibles (lateral view). Each point represents the average skull shape of an individual species. Axes are principal component 1 (PC1) and principal component 2 (PC2) of the average scores from Principal Components Analyses of mean Procrustes shape coordinates for each species.}
+	\caption[Morphospace (principal components) plot of morphological diversity in tenrec and golden mole skulls.]
+		{Principal components plots of the morphospaces occupied by tenrecs (triangles, n=31 species) and golden moles (circles, n=12 species) for the skulls in dorsal (top left), ventral (top right) and lateral (bottom left) views, and mandibles in lateral view (bottom right). Each point represents the average skull shape of an individual species. Axes are principal component 1 (PC1) and principal component 2 (PC2) of the average scores from principal components analyses of mean Procrustes shape coordinates for each species.}
 	\label{fig:FourPCA}
 	\end{figure}
 %----------------------------------------------
 
-	To compare morphological diversity in the two families, I used the PC axes which accounted for 95\% of the cumulative variation in each of the skull analyses: dorsal (n=6 axes), ventral (n=7 axes) and lateral (n=7 axes) and the mandibles (n=11 axes).
-	
-	Firstly, I compared the position of each Family within the morphospace plots. Tenrecs and golden moles occupy significantly different positions in the dorsal (npMANOVA, F\textsubscript{1,42}=68.13, R$^2$=0.62, p=0.001 ), ventral (npMANOVA, F\textsubscript{1,42}=103.33, R$^2$=0.72 , p=0.001 ) and lateral (npMANOVA, F\textsubscript{1,42} = 76.7, R$^2$ =0.652, p=0.001 ) skull morphospaces as well as in the mandible morphospace (npMANOVA, F\textsubscript{1,42}=60.38, R$^2$=0.59, p=0.001),  indicating that the Families have very different, non-overlapping cranial and mandible morphologies (Figure \ref{fig:FourPCA}). 
+	To compare morphological diversity in the two families, I used the PC axes which accounted for 95\% of the cumulative variation in each of the skull analyses: dorsal (n=6 axes), ventral (n=7 axes) and lateral (n=7 axes) and the mandibles (n=11 axes). First, I compared the position of each Family within the morphospace plots. Tenrecs and golden moles occupy significantly different positions in the dorsal (npMANOVA: F\textsubscript{1,42}=68.13, R$^2$=0.62, p=0.001 ), ventral (npMANOVA: F\textsubscript{1,42}=103.33, R$^2$=0.72 , p=0.001 ) and lateral (npMANOVA: F\textsubscript{1,42} = 76.7, R$^2$ =0.652, p=0.001 ) skull morphospaces as well as in the mandible morphospace (npMANOVA: F\textsubscript{1,42}=60.38, R$^2$=0.59, p=0.001),  indicating that the Families have very different, non-overlapping cranial and mandible morphologies (Figure \ref{fig:FourPCA}). 
 
 	
 	%SF: I changed the text to have no spacing around = and the tables have spaces around the +/- because otherwise it looks too cluttered
@@ -105,35 +102,37 @@
 %Results table: I changed the format to make it fit better
 	\begin{table}[!htbp]			
 		\caption[Comparison of morphological diversity in tenrecs and golden moles.]
-		{Morphological diversity in tenrecs compared to golden moles. I repeated each analysis with the full data (31 tenrec species) and then with 17 tenrec species (including just five species from the \textit{Microgale} genus). In each case, I compared the morphological diversity in tenrecs to the diversity within 12 species of golden moles. Significant differences between the two Families (p$<$0.05) are highlighted in bold.}
+		{Morphological diversity in tenrecs compared to golden moles using 31 tenrecs or 17 tenrecs (including just five species from the \textit{Microgale} Genus), and 12 golden moles. Morphological diversity of the Family is the mean Euclidean distance from each species to the Family centroid. Significant differences between the two Families (p$<$0.05) from two-tailed t-tests are highlighted in bold.}
 		\input{Disparity/writing/tables/cent.dist.diversity} 
 		\label{tab:diversity}  
 	\end{table}
 
 %SF: Added the degrees of freedom to the t test results
+% NC: Don't put these in brackets, it looks weird. Also can you left align the p values and make them all the same number of figures i.e. either 0.110 and 0.014 OR 0.11 and 0.01. If the latter use < 0.01 for anything smaller. Same goes for SEs. And t values. 
+% NC: Also need a column heading above tenrecs and golden moles to say "morphological diversity"
 %------------------------------------
 
 	Secondly, I compared the morphological diversity within each Family. Based on my measures of mean Euclidean distance to the Family's centroid, tenrec skulls are more morphologically diverse than golden mole skulls when they are measured in lateral view but not in dorsal or ventral view (Table \ref{tab:diversity}). In contrast, when I analysed morphological diversity of skulls within the sub-sample of 17 tenrecs (including just five \textit{Microgale} species) compared to the 12 golden mole species, I found that tenrec skulls were significantly more morphologically diverse than golden moles in all analyses (Table \ref{tab:diversity}).
 		
 	The results of my analyses of the mandibles were different to those for the skulls. In the full analysis (31 species of tenrec compared to 12 species of golden mole), I found that golden moles have significantly more diverse mandible shapes than tenrecs but this difference was not significant when I used just 17 tenrec species (Table \ref{tab:diversity}). 
 	%Moved this paragraph up from the discussion
-	I recognised that my landmarks and curves for the mandibles focus particular attention on the ascending ramus (condyloid, condylar and angular processes, Figure \ref{fig:sklat_mands}). Therefore, I  deleted the three semilandmark curves around these structures and repeated my comparison of morphological diversity in the two Families. In this case, I found no significant differences in morphological diversity between the two Families (t-test, t\textsubscript{(26.099)}=1.709, p=0.099). Therefore, my results seem to indicate that golden moles have greater morphological variation in the posterior structures of their mandibles compared to tenrecs.
+	I recognised that my landmarks and curves for the mandibles focus particular attention on the ascending ramus (condyloid, condylar and angular processes, Figure \ref{fig:sklat_mands}). Therefore, I  deleted the three semilandmark curves around these structures and repeated my comparison of morphological diversity in the two Families. In this case, I found no significant differences in morphological diversity between the two Families (t-test, t\textsubscript{26.099}=1.709, p=0.099). Therefore, my results seem to indicate that golden moles have greater morphological variation in the posterior structures of their mandibles compared to tenrecs.
 	
 	The pairwise permutation tests for each analysis confirmed that differences in morphological diversity were not artefacts of differences in sample size (Table \ref{tab:permutations}). I discuss my results further in Chapter \textbf{\ref{chap:discussion}}.
-	st
+
 %------------------------------------------------------
 %Added the permutation results
+% NC: I've shortened this a bit
 \begin{table}[!htbp]			
-	\caption[Results of the permutation tests]{Results of the permutation analyses which compared the observed differences in morphological diversity to a null distribution of expected results. I repeated the permutation comparisons for both the full (31 species of tenrec compared to 12 species of golden mole) and reduced (17 species of tenrec compared to 12 golden moles) data sets. In each case, the observed differences in morphological diversity were significantly different to the expected differences under a null hypothesis of equivalent diversities in the two Families (p<0.05). Therefore, the differences in morphological diversity between the two Families were not just artefacts of differences in sample size.}
+	\caption[Results of the permutation tests]{Results of the permutation analyses comparing the observed differences in morphological diversity to a null distribution of expected results. Morphological diversity of the Family is the mean Euclidean distance from each species to the Family centroid. Results are shown for both the full (31 species of tenrec compared to 12 species of golden mole) and reduced (17 species of tenrec compared to 12 golden moles) data sets. Significant values (p$<$0.05) indicate that observed morphological diversity is different to the expected differences under a null hypothesis of equivalent diversities in the two Families.}
 	\input{Disparity/writing/tables/perm.res.combined} 
 	\label{tab:permutations}  
 \end{table}
-	
+
+% NC: Get rid of the bold here since everything is significant!
+% NC: Also need a column heading above measured and permuted values to say "morphological diversity
 %----------------------------------------------------
-%SF: I moved the discussion to a separate chapter
-
-
-	
+% NC: The positioning of the tables is a bit weird. Perhaps play around with the float options once this is all ready so that you can try and get this looking a bit neater.
 	
 
 
