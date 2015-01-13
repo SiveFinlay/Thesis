@@ -75,7 +75,7 @@
 
 %----------------------------------------------
 %Camera picture % NC: Can probably make this picture smaller - currently it's half a page.
-%SF I reduced it from 12 to 10 
+%SF I reduced it from 12 to 10 cm
 \begin{figure}[h] 
   \centering
   \includegraphics[width=10cm, height=10cm, keepaspectratio=true]{Methods/figures/camera.jpg}
@@ -101,8 +101,7 @@
 \subsection{\normalfont{Landmark placement on images}}
 
 
-	I used a combination of landmark and semilandmark analysis approaches to assess the shape variability in my skull and mandible specimens. % NC: Avoid one line paragraphs 
-	I used the TPS software suite \citep{Rohlf2013} to digitise landmarks and curves on the photos. I set the scale on each image individually to standardise for the different camera heights I used when photographing my specimens. I created separate data files for each of my four morphometric analyses (skulls in dorsal, ventral and lateral views and mandibles in lateral view). I digitised landmarks and semilandmark points on every image individually. Some specimens were too damaged to use so I had a different total number of images for each analysis: skulls dorsal (356), ventral (346), lateral (336) and mandibles (356).
+	I used a combination of landmark and semilandmark analysis approaches to assess the shape variability in my skull and mandible specimens.  I used the TPS software suite \citep{Rohlf2013} to digitise landmarks and curves on the photos. I set the scale on each image individually to standardise for the different camera heights I used when photographing my specimens. I created separate data files for each of my four morphometric analyses (skulls in dorsal, ventral and lateral views and mandibles in lateral view). I digitised landmarks and semilandmark points on every image individually. Some specimens were too damaged to use so I had a different total number of images for each analysis: skulls dorsal (356), ventral (346), lateral (336) and mandibles (356).
 	%Numbers are from the two_family_disparity script after cleaning up the data to remove damages specimens
 
 	When using semilandmark approaches there is a potential problem of over-sampling: simpler structures will require fewer semilandmarks to accurately represent their shape  \citep{MacLeod2012}. To ensure that I applied a uniform standard of shape representation to each outline segment (i.e. that simple structures would not be over-represented and more complex features would not be under-represented), I followed the method outlined by MacLeod \citeyearpar{MacLeod2012}. For each data set I chose a random selection of photos of specimens which represented the breadth of the morphological data (i.e. specimens from each sub-group of species). I drew the appropriate curves on each specimen and over-sampled the number of points on the curves. I measured the length of the line and regarded that as the 100\%, true length of that outline. I then re-sampled the curves with decreasing numbers of points and measured the length of the outlines. I calculated the length of each re-sampled curve as a percentage of the total length of the curve and then found the average percentage length for that reduced number of semilandmark points across all of the specimens in my test file. I continued this process until I found the minimum number of points that gave a curve length which was at least 95\% accurate.  I repeated these curve-sampling tests for each analysis to determine the minimum number of semilandmark points which would give accurate representations of morphological shape.
