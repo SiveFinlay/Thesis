@@ -97,13 +97,14 @@
 	%Numbers are from the npMANOVA based on PC axes within my diversity_twofamily_cent_dist script
 %----------------------------------------
 %Results table: I changed the format to make it fit better
+\begin{landscape}
 	\begin{table}[!htbp]			
 		\caption[Comparison of morphological diversity in tenrecs and golden moles.]
 		{Morphological diversity in tenrecs compared to golden moles using 31 tenrecs or 17 tenrecs (including just five species from the \textit{Microgale} Genus), and 12 golden moles. Morphological diversity of the Family is the mean Euclidean distance from each species to the Family centroid. Significant differences between the two Families (p$<$0.05) from two-tailed t-tests are highlighted in bold.}
 		\input{Disparity/writing/tables/cent.dist.diversity} 
 		\label{tab:diversity}  
 	\end{table}
-
+\end{landscape}
 %SF: Added the degrees of freedom to the t test results
 % NC: Don't put these in brackets, it looks weird. Also can you left align the p values and make them all the same number of figures i.e. either 0.110 and 0.014 OR 0.11 and 0.01. If the latter use < 0.01 for anything smaller. Same goes for SEs. And t values. 
 % NC: Also need a column heading above tenrecs and golden moles to say "morphological diversity"
@@ -120,12 +121,13 @@
 %------------------------------------------------------
 %Added the permutation results
 % NC: I've shortened this a bit
+\begin{landscape}
 \begin{table}[!htbp]			
 	\caption[Results of the permutation tests]{Results of the permutation analyses comparing the observed differences in morphological diversity to a null distribution of expected results. Morphological diversity of the Family is the mean Euclidean distance from each species to the Family centroid. Results are shown for both the full (31 species of tenrec compared to 12 species of golden mole) and reduced (17 species of tenrec compared to 12 golden moles) data sets. Significant values (p$<$0.05) indicate that observed morphological diversity is different to the expected differences under a null hypothesis of equivalent diversities in the two Families.}
 	\input{Disparity/writing/tables/perm.res.combined} 
 	\label{tab:permutations}  
 \end{table}
-
+\end{landscape}
 
 
 %SF: I got rid of the bold and added the extra column heading, I still need to fix the positioning
