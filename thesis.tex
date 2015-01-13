@@ -1,5 +1,6 @@
-\documentclass[twoside,12pt]{mythesis} %this is the mythesis.cls file
-% twoside,openright,versioninfo
+%\documentclass[twoside,12pt]{mythesis}%this is the mythesis.cls file % twoside,openright,versioninfo
+\documentclass[12pt]{mythesis} %Change to single sided layout for softbound printing
+
 
 % Consider:
 % \newcommand{\ie}{i.\,e.}
@@ -25,16 +26,16 @@
 %------------------------- 
 %Add package to set page margins - probably only need this for the final printed version (two sided printing)?
 
-%\usepackage{geometry}
+\usepackage{geometry}
 
-%\geometry{
-	%a4paper,
-	%total={210mm,297mm},
-	%left={35mm},
-	%right={20mm},
-	%top={20mm},
-	%={20mm},
-%}	
+\geometry{
+	a4paper,
+	total={210mm,297mm},
+	left={35mm},
+	right={20mm},
+	top={20mm},
+	bottom={20mm},
+}	
 %Need to add it to the declaration and acknowledgements and list of figures
 %--------------------------
 
