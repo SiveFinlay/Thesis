@@ -1,5 +1,5 @@
-%\documentclass[twoside,12pt]{mythesis}%this is the mythesis.cls file % twoside,openright,versioninfo
-\documentclass[12pt]{mythesis} %Change to single sided layout for softbound printing
+\documentclass[twoside,12pt]{mythesis}%this is the mythesis.cls file % twoside,openright,versioninfo
+%\documentclass[12pt]{mythesis} %Change to single sided layout for softbound printing
 
 
 % Consider:
@@ -23,6 +23,8 @@
 \setcounter{tocdepth}{4}
 \setcounter{secnumdepth}{4} %number of subsections that are allowed
 
+\usepackage{lineno}
+\linenumbers
 %------------------------- 
 %Add package to set page margins - probably only need this for the final printed version (two sided printing)?
 
@@ -32,7 +34,7 @@
 	a4paper,
 	total={210mm,297mm},
 	left={35mm},
-	right={20mm},
+    right={20mm},
 	top={20mm},
 	bottom={20mm},
 }	
